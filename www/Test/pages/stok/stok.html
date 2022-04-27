@@ -1,0 +1,187 @@
+<div class="page">
+    <!-- KASIR TOOLBAR -->
+	<div class="kasir_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/beranda/" class="tab-link">
+				<i class="f7-icons">printer_fill</i>
+				<span class="tabbar-label">Kasir</span>
+			  </a>
+			<a href="/stok/" class="tab-link tab-link-active">
+				<i class="f7-icons">rectangle_grid_2x2_fill</i>
+				<span class="tabbar-label">Stok</span>
+			  </a>
+			<a href="/riwayat/" class="tab-link">
+				<i class="f7-icons">doc_text_fill</i>
+				<span class="tabbar-label">Riwayat</span>
+			  </a>
+			  <a href="/profile/" class="tab-link">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+    </div>
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>    
+
+    <!-- MODAL PILIH CABANG -->
+    <div id="mod-stok-pilihcabang" class="mod-jenisbayar">
+        <div class="mod-jenis-con">
+            <h5>Pilih Cabang</h5>
+            <div class="row" onclick="listresto_function('stok','0','Semua Cabang','-')">
+                <a>Semua Cabang</a>
+            </div>
+            <div class="mod_pilihcabang_content">
+                <!-- <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div> -->
+            </div>
+            <div class="block" style="margin-bottom: 0; margin-top: 1rem;">
+                <div class="col-50"><a style="background: #9B9B9B;" class="button button-fill button-round" onclick="TutupModal('mod-stok-pilihcabang')">Tutup</a></div>
+            </div>           
+        </div>
+    </div>
+
+    <!-- MODAL MENU DETIL (STOK ADA) -->
+    <div id="Stok_ModalStok" class="modal-menu">
+        <div class="modal-menu-con">
+            <div>
+                <h4 id="Stok_ModalStok_nama"></h4>
+                <p id="Stok_ModalStok_deskripsi"></p>
+                <h4 id="Stok_ModalStok_stok"></h4>
+                <h4 id="Stok_ModalStok_id" hidden></h4>
+            </div>
+            <div style=" display: flex; max-width: 8rem; margin: auto;" class="box-button" id="listButton_stok">
+                <a id='stok_btn' onclick="Kurang('Stok_ModalStok')" class="button btn-mns"><i class="fa fa-minus"></i></a>
+                <input type="number" style="text-align: center; max-width: 3rem; margin: auto;" id="Stok_ModalStok_JumlahPesanan" value="0">
+                <a onclick="TambahStok('Stok_ModalStok')" class="button btn-pls"><i class="fa fa-plus"></i></a>
+            </div>
+            <div class="row">                
+                <div class="col-100">
+                    <a onclick="ubahStok('Stok_ModalStok', 'ubah')" style="font-size: 10px;" class="button button-fill">Ubah Stok</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content bg-custom">
+        <!-- TITLE / NAVBAR -->
+        <div class="navbar" style="margin-bottom: 1rem; color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/beranda/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title">Stok</div>
+            </div>
+        </div>
+
+        <!-- ADMIN PILIH CABANG -->
+        <div style="margin-bottom: 1rem;" class="pilihcabang pilih-kasir-admin">
+            <h4>Pilih Cabang</h4>
+            <div class="card" onclick="BukaModal('mod-stok-pilihcabang')">
+                <div class="card-content">
+                    <div class="tanggal">
+                        <p><b id="stok_namaresto">Cabang: -</b></p>
+                        <p style="color: #808080;" id="stok_alamatresto">Alamat: -</p>
+                        <p><b id="stok_idresto" hidden>0</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="pencarian">
+            <div class="list">
+                <div class="mytextbox">
+                  <span class="SearchMenu_Span"><i class="f7-icons">search</i></span>
+                  <input type="text" name="Stok_Search" id="Stok_Search" placeholder="Cari Menu">
+                </div>
+            </div>
+            <div class="list media-list">                    
+                <div class="item-content">                       
+                    <div class="item-inner item-cell">
+                        <div class="item-title-row">
+                            <div class="item-cell kategori-text">Kategori</div>
+                            <div class="item-cell see-all">
+                                <a href="/kategori/stok"><small>See All</small></a>
+                            </div>  
+                        </div>
+                    </div>                           
+                </div>    
+            </div>
+        </div>
+
+        <!-- KATEGORI COLUMN -->
+        <div class="block slider" style="margin: 0">
+			<div class="mycolumn slides-kategori" id="stok_list_kategoriBox">
+                <!-- ISI VIA JS -->
+                <!-- <div class="column">
+                    <a style="font-size: 12px; font-weight:bold; color: black;">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="" >
+                        <label>Makanan</label>
+                    </a>
+                </div>
+                <div class="column">
+                    <a style="font-size: 12px; font-weight:bold; color: black;">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="" >
+                        <label>Makanan</label>
+                    </a>
+                </div>
+                <div class="column">
+                    <a style="font-size: 12px; font-weight:bold; color: black;">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="" >
+                        <label>Makanan</label>
+                    </a>
+                </div> -->
+			</div>
+        </div>
+
+        <!-- LIST MENU WITH STOK -->
+        <div id="Stok_kategoriID" hidden>KATEGORI ID</div>
+        <div id="Stok_MenuList" class="kasir-listmenu block" style="margin-bottom: 3.5rem; padding: .3rem;">
+            <!-- ISI VIA JS -->
+            <!-- <a style="color: black;">
+                <div class="card">
+                    <div class="card-content card-content-padding">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="">
+                        <h5>nama menu</h5><br>
+                        <p style="color: #808080; font-size: 11px;">menu deskripsi ini enak ini paiot in imurah</p><br>
+                        <h5>Stok: 100</h5>
+                    </div>
+                </div>
+            </a>
+            <a style="color: black;">
+                <div class="card">
+                    <div class="card-content card-content-padding">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="">
+                        <h5>nama menu</h5><br>
+                        <p style="color: #808080; font-size: 11px;">menu deskripsi ini enak ini paiot in imurah</p><br>
+                        <h5>Rp. 50.000</h5>
+                    </div>
+                </div>
+            </a> -->
+        </div>
+
+    </div>
+</div>

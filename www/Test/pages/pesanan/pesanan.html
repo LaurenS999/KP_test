@@ -1,0 +1,215 @@
+<div class="page">
+	<!-- CUSTOMER TOOLBAR -->
+	<div class="customer_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/beranda/" class="tab-link">
+				<i class="f7-icons">house_fill</i>
+				<span class="tabbar-label">Beranda</span>
+			  </a>
+			<a href="/pesanan/" class="tab-link tab-link-active">
+				<i class="f7-icons">bag_fill</i>
+				<span class="tabbar-label">Pesanan</span>
+			  </a>
+			  <a href="/profile/" class="tab-link">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+    </div>
+	<!-- KASIR TOOLBAR -->
+	<div class="kasir_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/beranda/" class="tab-link tab-link-active">
+				<i class="f7-icons">printer_fill</i>
+				<span class="tabbar-label">Kasir</span>
+			  </a>
+			<a href="/stok/" class="tab-link">
+				<i class="f7-icons">rectangle_grid_2x2_fill</i>
+				<span class="tabbar-label">Stok</span>
+			  </a>
+			<a href="/riwayat/" class="tab-link">
+				<i class="f7-icons">doc_text_fill</i>
+				<span class="tabbar-label">Riwayat</span>
+			  </a>
+			  <a href="/profile/" class="tab-link">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+    </div>
+    <!-- DRIVER TOOLBAR-->
+	<div class="driver_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/pesanan/" class="tab-link tab-link-active">
+				<i class="f7-icons">bag_fill</i>
+				<span class="tabbar-label">Pesanan</span>
+			  </a>
+			<a href="/riwayat/" class="tab-link">
+				<i class="f7-icons">car_fill</i>
+				<span class="tabbar-label">Riwayat</span>
+			  </a>
+			  <a href="/profile/" class="tab-link">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+	</div>
+
+	<!-- ADMIN TOOLBAR -->
+	<div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/beranda/" class="tab-link tab-link-active">
+				<i class="f7-icons">house_fill</i>
+				<span class="tabbar-label">Beranda</span>
+			  </a>
+			  <a href="/profile/" class="tab-link">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+	</div>
+
+	<!-- MODAL ALERT TIDAK ADA pesanan -->
+    <div id="mod-alert-pesanan" class="modpass">
+		<div class="modcon">
+			<h3 style="margin-bottom: 2rem;">Pesanan</h3>
+			<h5 style="margin-bottom: 2rem;">Belum ada pesanan baru.</h5>
+            <a onclick="TutupModal('mod-alert-pesanan')" class="button button-fill tutup-btn">Tutup</a>
+		</div>
+	</div>
+    
+	<!-- MODAL PILIH CABANG -->
+    <div id="mod-pilihcabang-pesanan" class="mod-jenisbayar">
+        <div class="mod-jenis-con">
+            <h5>Pilih Cabang</h5>
+            <div class="row" onclick="listresto_function('pesanan','0','Semua Cabang','-')">
+                <a>Semua Cabang</a>
+            </div>
+            <div class="mod_pilihcabang_content">
+                <!-- <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div> -->
+            </div>
+            <div class="block" style="margin-bottom: 0; margin-top: 1rem;">
+                <div class="col-50"><a style="background: #9B9B9B;" class="button button-fill button-round" onclick="TutupModal('mod-pilihcabang-pesanan')">Tutup</a></div>
+            </div>           
+        </div>
+    </div>
+
+    <div class="page-content pesanan-page bg-custom">
+        <!-- CUSTOMER TITLE  -->
+        <div class="title-customer">
+            <h3>Pesanan</h3>
+		</div>
+        <!-- KASIR + ADMIN + DRIVER TITLE  -->
+		<div class="title-driver-kasir">
+            <h3>Daftar Pesanan</h3>
+		</div>
+
+		<!-- ADMIN PILIH CABANG -->
+        <div class="pilihcabang pilih-kasir-admin">
+            <h4>Pilih Cabang</h4>
+            <div class="card" onclick="BukaModal('mod-pilihcabang-pesanan')">
+                <div class="card-content">
+                    <div class="tanggal">
+                        <p><b id="pesanan_namaresto">Cabang: -</b></p>
+                        <p style="color: #808080;" id="pesanan_alamatresto">Alamat: -</p>
+                        <p><b id="pesanan_idresto" hidden>0</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<!-- CUSTOMER MENU -->
+		<div class="status-customer row">
+			<div class="col activated"><a><b>Dalam Proses</b></a></div>
+			<div class="col"><a onclick="Tab_2()"><b>Selesai</b></a></div>
+		</div>
+		<!-- DRIVER MENU -->
+		<div class="status-driver row">
+			<div class="col activated"><a><b>Sedang Diproses</b></a></div>
+			<div class="col" onclick="Tab_2()"><a><b>Sedang Dikirim</b></a></div>
+		</div>
+		<!-- KASIR + ADMIN MENU -->
+		<div class="status-kasir row">
+			<div class="col activated"><a><b>Masuk</b></a></div>
+			<div class="col"><a onclick="Tab_2()"><b>Sedang Dikirim</b></a></div>
+		</div>
+
+		<!-- CUSTOMER PESANAN LIST -->
+		<div class="content-pesanan listpesan-customer">
+			<!-- ISI VIA JS -->
+			<!-- <div class="card card-outline">
+				<div class="card-content card-content-padding">
+					<div class="row">
+						<div class="col-66">
+							<p><b>[11111111111111]</b></p>
+							<p>Driver: <label>syapul jamila</label></p>
+						</div>
+						<div style="color: #F32E25;" class="col-33">
+							<b>Status</b>
+							<p>Sedang Diproses</p>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer">
+					<label>01 November / 01.14 AM</label>
+				</div>
+			</div> -->
+		</div> 
+
+		<!-- DRIVER PESANAN LIST -->
+		<div class="content-pesanan listpesan-driver">
+			<!-- ISI VIA JS -->
+			<!-- <div class="card card-outline">
+				<div class="card-content card-content-padding">
+					<div class="row">
+						<div class="col-66">
+							<p><b>[11111111111111]</b></p>
+							<p>Pelanggan: <label>syapul jamila</label></p>
+						</div>
+						<div style="color: #F32E25;" class="col-33">
+							<b>Status</b>
+							<p>Sedang Diproses</p>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer">
+					<label>01 November / 01.13 AM</label>
+				</div>
+			</div> -->
+		</div>
+
+		<!-- KASIR + ADMIN PESANAN LIST -->
+		<div class="content-pesanan listpesan-kasir">
+			<!-- ISI VIA JS -->
+			<!-- <div class="card card-outline">
+				<div class="card-content card-content-padding">
+					<div class="row">
+						<div class="col-66">
+							<p><b>[11111111111111]</b></p>
+							<p>Pelanggan: <label>syapul jamila</label></p>
+						</div>
+						<div style="color: #F32E25;" class="col-33">
+							<b>Status</b>
+							<p>Menunggu Konfirmasi</p>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer">
+					<label>01 November / 01.13 AM</label>
+				</div>
+			</div>
+		</div> -->
+
+    </div>
+</div>

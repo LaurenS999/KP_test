@@ -1,0 +1,120 @@
+<div class="page">
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MODAL PILIH GAMBAR -->
+    <div id="modgambar_menu" class="modpass">
+        <div class="modcon">
+            <h3 style="margin-bottom: 2rem; text-align: center;">Pilih Gambar</h3>
+            <div class="row" style="margin-right: 1.5rem;">
+                <div class="col-50"><a onclick="camera('menu')" class="button button-fill tutup-btn">Camera</a></div>
+                <div class="col-50"><a onclick="library('menu')" class="button button-fill tutup-btn">Galeri</a></div>
+            </div>
+            <div class="row" style="margin-right: 1.5rem;">
+                <div class="col-100"><a onclick="TutupModal('modgambar_menu')" class="button button-fill tutup-btn">Tutup</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content bg-custom">
+        <!-- TITLE / NAVBAR -->
+        <div class="navbar" style="color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/menu/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title" id="menu_title_ubah">Ubah Menu</div>
+                <div class="title" id="menu_title_tambah">Tambah Menu</div>
+            </div>
+        </div>
+
+        <!-- FORM CONTENT -->
+        <div class="content-box">
+            <div class="card no-boxshadow">
+                <h4 id="menudetil_menuid" hidden></h4>
+                <h4>Nama<label class="asterisk-input"></label></h4>
+                <input type="text" name="menudetil_menunama" id="menudetil_menunama" placeholder="Ketik nama disini...">
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Harga Jual<label class="asterisk-input"></label></h4>
+                <input type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" name="menudetil_menuharga" id="menudetil_menuharga" placeholder="Ketik harga jual disini...">
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Stok<label class="asterisk-input"></label></h4>
+                <input type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" name="menudetil_stok" id="menudetil_stok" placeholder="Ketik stok disini...">
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Diskon (Persen %)<label class="asterisk-input"></label></h4>
+                <input type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" name="menudetil_menudiskon" id="menudetil_menudiskon" placeholder="Ketik diskon disini... (0)">
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Deskripsi<label class="asterisk-input"></label></h4>
+                <input type="text" maxlength="75" name="menudetil_menudesc" id="menudetil_menudesc" placeholder="Ketik deskripsi disini...">
+            </div>
+        </div>
+
+        <form class="form-ajax-editkaryawan">
+            <div class="card">
+                <div class="row">
+                    <div class="col-50">
+                        <h4>Kategori
+            				<label class="asterisk-input"></label>
+                        </h4>
+                        <div class="mytextbox my-combobox">
+                            <select name="menu_category_combobox" id="menu_category_combobox" class="category_combobox">
+                                <!-- <option value="">Pizza</option>
+                                <option value="">Coffee</option> -->
+                            </select>
+                            <i class="f7-icons">chevron_right</i>
+                        </div>
+                    </div>
+                    <div style="border-left: 1px solid black; padding-left: 1rem;" class="col-50">
+                        <h4>Cabang
+            				<label class="asterisk-input"></label>
+                        </h4>
+                        <div class="mytextbox my-combobox">
+                            <select name="menu_cabang_combobox" id="menu_cabang_combobox" class="cabang_combobox">
+                                <!-- <option value="">Resto #01</option>
+                                <option value="">Resto #01</option> -->
+                            </select>
+                            <i class="f7-icons">chevron_right</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="content-box">
+            <div class="card no-boxshadow">
+                <h4 class="img-title">Gambar</h4>
+                <div class="img-section">
+                    <img id="menu_propic" src="./img/drawable-ldpi/Logo.png" alt="">
+                    <a style="width: 150px; background: #9B9B9B;" class="button button-fill button-round" onclick="BukaModal('modgambar_menu')">Pilih</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="double-button-box" id="menu_ubah">
+            <a class="button button-fill button-round" onclick="KonfirmasiHapus('menu')">Hapus</a>
+            <a style="background: #04203E;" class="button button-fill button-round" onclick="UbahData('menu')">Ubah</a>
+        </div>
+
+        <div class="single-button-box" id="menu_tambah">
+            <a style="background: #04203E;" class="button button-fill button-round" onclick="TambahData('menu')">Tambah</a>
+        </div>
+
+    </div>
+</div>

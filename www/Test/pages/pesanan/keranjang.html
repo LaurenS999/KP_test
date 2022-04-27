@@ -1,0 +1,298 @@
+<div class="page">
+    <!-- CUSTOMER TOOLBAR -->
+    <div class="customer_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/pesanan/" class="tab-link tab-link-active">
+                <i class="f7-icons">bag_fill</i>
+                <span class="tabbar-label">Pesanan</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+    <!-- KASIR TOOLBAR -->
+	<div class="kasir_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/beranda/" class="tab-link tab-link-active">
+				<i class="f7-icons">printer_fill</i>
+				<span class="tabbar-label">Kasir</span>
+			  </a>
+			<a href="/stok/" class="tab-link">
+				<i class="f7-icons">rectangle_grid_2x2_fill</i>
+				<span class="tabbar-label">Stok</span>
+			  </a>
+			<a href="/riwayat/" class="tab-link">
+				<i class="f7-icons">doc_text_fill</i>
+				<span class="tabbar-label">Riwayat</span>
+			  </a>
+			  <a href="/profile/" class="tab-link">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+    </div>
+
+    <!-- MODAL JENIS PEMBAYARAN -->
+    <div id="mod-jenisbayar" class="mod-jenisbayar">
+        <div class="mod-jenis-con">
+            <h5>Jenis Pembayaran</h5>
+            <div class="mod_jenisbayar_content">
+                <!-- <div class="row">
+                    <a href="">Tunai</a>
+                </div>
+                <div class="row">
+                    <a href="">Transfer Bank</a>
+                </div>
+                <div class="row">
+                    <a href="">QRIS</a>
+                </div> -->
+            </div>	
+        </div>
+    </div>
+
+    <!-- MODAL PEMABYARAN-->
+    <div id="modal-pembayaran-keranjang" class="modal-menu">
+        <div class="modal-menu-con">
+            <div class="modal-pembayaran">
+                <h4>Total Pembayaran</h4>
+                <h1 id="modal-pembayaran-keranjang_totalbayar" style="color: #F32E25;">Rp 0</h1>
+            </div>
+            <div class="row">
+                <div class="col-50" >
+                    <label style="color: #2C303E;">Pilih Jenis</label>
+                    <div class="mytextbox combobox">
+                        <select name="keranjang_combobox" id="keranjang_combobox">
+                            <option value="Makan di tempat">Makan di tempat</option>
+                            <option value="Take Away">Take Away</option>
+                        </select>
+                        <!-- <span><i style="color: black;" class="f7-icons">chevron_down</i></span> -->
+                    </div>
+                </div>
+                <div class="col-50">
+                    <label style="color: #2C303E;">Cantumkan Meja</label>
+                    <div class="mytextbox">
+                        <input style="padding: 0 .3rem; width: 100%; height: 25px;" type="text" placeholder="-">
+                    </div>
+                </div>
+            </div>
+            <a style="margin-top: 1rem;" class="button button-fill" onclick="pesan()">Cetak Nota</a>
+        </div>
+    </div>
+
+    <!-- MODAL MENU DETIL -->
+    <div id="mod-ubahmenu-keranjang" class="modal-menu">
+        <div class="modal-menu-con">
+            <h5 style="color: #9B9B9B;">Ubah Pesanan</h5>
+
+            <div class="list-pesan-detil" id="mod_ubahmenu_content_keranjang">
+                <!-- <div class="item-pesandetil">
+                    <h5 style="display: inline;">Beef Burger</h5>
+                    <div id="item_pesandetil_'+ i +'" hidden>123</div>
+                    <div class="btn-group">
+                        <a class="button btn-trsh"><i class="f7-icons">trash_fill</i></a>
+                        <a class="button btn-mns"><i class="fa fa-minus"></i></a>
+                        <label>0</label>
+                        <a class="button btn-pls"><i class="fa fa-plus"></i></a>
+                    </div>
+                </div> -->
+            </div>     
+            
+            <div class="row" style="margin-top: 2rem;">
+                <div class="col-50">
+                    <a style="background: #9B9B9B;" class="button button-fill button-round" onclick="TutupModal('mod-ubahmenu-keranjang')">Tutup</a>
+                </div>
+                <div class="col-50">
+                    <a class="button button-fill button-round" onclick="modal_ubahmenu_keranjang()">Ubah</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL KONFIRMASI PESANAN -->
+	<div id="mod-konfirmasi-pesan" class="modpass">
+		<div class="modcon">
+			<h3 style="margin-bottom: 2rem;">Konfirmsai Pesanan</h3>
+			<h5 style="margin-bottom: 2rem;">Anda yakin ingin melanjutkan transaksi ?</h5>
+			<div class="row" style="margin-right: 1.5rem;">
+				<div class="col-50"><a onclick="TutupModal('mod-konfirmasi-pesan')" class="button button-fill tutup-btn">Batal</a></div>
+				<div class="col-50"><a onclick=pesan() class="button button-fill ganti-btn">Pesan</a></div>
+			</div>
+		</div>
+	</div>
+
+    <div class="page-content bg-custom">
+        <!-- TITLE / NAVBAR -->
+        <div class="navbar" style="color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/beranda/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title">Detil Keranjang</div>
+            </div>
+        </div>
+
+        <!-- KERANJANG CUSTOMER -->
+        <section class="keranjang-customer">
+            <div class="card">
+                <h4>Nama Pelanggan</h4>
+                <label id="keranjang_nama">John Doe</label>
+            </div>
+            <div class="card">
+                <h4>Alamat</h4>
+                <div class="mytextbox">
+                    <textarea type="text" name="keranjang_alamat" id="keranjang_alamat" placeholder="Alamat"></textarea>
+                </div>
+            </div>
+            <div class="card">
+                <div id="keranjang_map" class="google_maps"></div>
+            </div>
+            <div class="row card no-boxshadow">
+                <div class="col-50">
+                    <h4>Jarak</h4>
+                    <label id="keranjang_jarak">5<label> KM</label></label>
+                </div>
+                <div class="col-50" style="padding-left: .5rem; border-left: 1px solid black;">
+                    <h4>Biaya Kirim</h4>
+                    <label id="keranjang_biaya_kirim"><label>Rp </label>2000</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <h5>Detail Pesanan</h5>
+            </div>
+
+            <div class="detailpesanan" onclick="BukaModal('mod-ubahmenu-keranjang')">
+                <table>
+                    <tbody id="Keranjang_ContentMenuList">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="card no-boxshadow">
+                <div class="card-content card-content-padding">
+                    <div class="row">
+                        <p>Subtotal</p>
+                        <p id="Keranjang_SubTotal">Rp 0</p>                        
+                    </div>
+                    <div class="row">
+                        <p>Diskon</p>
+                        <p id="Keranjang_Diskon">-Rp 0</p>                        
+                    </div>
+                    <div class="row">
+                        <p>Biaya Kirim</p>
+                        <p id="Keranjang_BiayaKirim">Rp 0</p>                        
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h4>Total</h4>
+                    <h4 id="Keranjang_Total">Rp 0</h4>                    
+                </div>
+            </div>
+            <div class="card">
+                <h4>Catatan Tambahan</h4>
+                <div class="mytextbox">
+                    <textarea type="text" name="keranjang_catatan" id="keranjang_catatan"></textarea>
+                </div>
+            </div>
+            <div id="btn-jenisbayar-customer" class="row card no-boxshadow">
+                <div class="col-50">
+                    <h4>Jenis Pembayaran</h4>
+                </div>
+                <div class="col-50" style="text-align: end;" onclick="BukaModal('mod-jenisbayar')">
+                    <h4 id="jenispembayaram_text">
+                        Pilih Pembayaran<i class="f7-icons" style="color: black;">chevron_right</i>
+                    </h4>
+                    <h4 id="jenispembayaran_id" hidden>0</h4>
+                </div>
+            </div>
+
+            <div class="row" style="margin: 1rem 0; background-color: white;">
+                <div style="float: left;" class="col-50">
+                    <h5 style="color: #F32E25;">Total</h5>
+                    <h3 id="Keranjang_Total_bottom">Rp 0</h3>
+                </div>
+                <button style="margin-top: 1rem; display: flex;" class="col-50 button button-raised button-fill button-round" onclick="BukaModal('mod-konfirmasi-pesan')">Pesan</button>
+            </div>
+        </section>
+
+        <!-- KERANJANG KASIR -->
+        <section class="keranjang-kasir">
+            <div class="card no-boxshadow">
+                <h4>Nama Pelanggan
+    				<label class="asterisk-input"></label>
+                </h4>
+                <div class="mytextbox">
+                    <input type="text" name="keranjang_kasir_namapelanggan" id="keranjang_kasir_namapelanggan">
+                </div>
+            </div>
+            <div class="row">
+                <h5>Detail Pesanan</h5>
+            </div>
+            <div class="detailpesanan" onclick="BukaModal('mod-ubahmenu-keranjang')">
+                <table>
+                    <tbody id="keranjang_kasir_menulist">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="card no-boxshadow">
+                <div class="card-content card-content-padding">
+                    <div class="row">
+                        <p>Subtotal</p>
+                        <p id="keranjang_kasir_subtotal">Rp 0</p>
+                    </div>
+                    <div class="row">
+                        <p>Diskon</p>
+                        <p id="keranjang_kasir__totaldiskon">Rp 0</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h4>Total</h4>
+                    <h4 id="keranjang_kasir_total">Rp 0</h4>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Catatan Tambahan</h4>
+                <div class="mytextbox">
+                    <textarea type="text" name="keranjang_kasir_catatan" id="keranjang_kasir_catatan"></textarea>
+                </div>
+            </div>
+            <div id="btn-jenisbayar-kasir" class="row card no-boxshadow">
+                <div class="col-50">
+                    <h4>Jenis Pembayaran</h4>
+                </div>
+                <div class="col-50" style="text-align: end;" onclick="BukaModal('mod-jenisbayar')">
+                    <h4 id="jenispembayaram_kasir_text">
+                        Pilih Pembayaran<i class="f7-icons" style="color: black;">chevron_right</i>
+                    </h4>
+                    <h4 id="jenispembayaran_kasir_id" hidden>0</h4>
+                </div>
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Nominal Pembayaran
+    				<label class="asterisk-input"></label>
+                </h4>
+                <div class="mytextbox">
+                    <input type="text" name="keranjang_kasir_nominalpembayaran" id="keranjang_kasir_nominalpembayaran">
+                </div>
+            </div>
+
+            <div class="row" style="margin: 1rem 0; background-color: white;">
+                <div style="float: left;" class="col-50">
+                    <h5 style="color: #F32E25;">Total</h5>
+                    <h3 id="keranjang_kasir_total2">Rp 0</h3>
+                </div>
+                <button style="margin-top: 1rem; display: flex;" class="col-50 button button-raised button-fill button-round" onclick="BukaModal('modal-pembayaran-keranjang')">Pesan</button>
+            </div>
+        </section>
+        
+    </div>
+</div>

@@ -1,0 +1,113 @@
+<div class="page">
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- FAB BUTTON KARYAWAN (ADMIN) -->
+    <div style="width: 55%; max-width: 180px;" class="fab-kasir fab fab-extended fab-center-bottom color-red">
+        <a href="/karyawanedit/0">
+            <i style="font-size: 20px;" class="f7-icons">plus</i>
+            <div class="fab-text" style="font-size: 10px; padding-right: 1rem;">Tambah Karyawan</div>
+        </a>
+    </div>
+
+    <!-- MODAL PILIH CABANG -->
+    <div id="mod-karyawan-pilihcabang" class="mod-jenisbayar">
+        <div class="mod-jenis-con">
+            <h5>Pilih Cabang</h5>
+            <div class="row" onclick="listresto_function('karyawan','semuaresto','Semua Cabang','')">
+                <a>Semua Cabang</a>
+            </div>
+            <div class="mod_pilihcabang_content">
+                <!-- <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div> -->
+            </div>
+            <div class="block" style="margin-bottom: 0; margin-top: 1rem;">
+                <div class="col-50"><a onclick="TutupModal('mod-karyawan-pilihcabang')" style="background: #9B9B9B;" class="button button-fill button-round">Tutup</a></div>
+            </div>           
+        </div>
+    </div>
+
+    <div class="page-content bg-custom">
+        <!-- TITLE -->
+        <div class="navbar" style="color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/beranda/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title">Daftar Karyawan</div>
+            </div>
+        </div>
+
+        <!-- ADMIN PILIH CABANG -->
+        <div class="pilihcabang pilih-kasir-admin" onclick="BukaModal('mod-karyawan-pilihcabang')">
+            <h4>Pilih Cabang</h4>
+            <div class="card">
+                <div class="card-content">
+                    <div class="tanggal">
+                        <p><b id="karyawan_namaresto">Semua Cabang</b></p>
+                        <p style="color: #808080;" id="karyawan_alamatresto"></p>
+                        <p id="karyawan_idresto" hidden>semuaresto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="pencarian" style="margin-top: 2rem;">
+            <div class="list">
+                <div class="mytextbox">
+                  <span class=""><i class="f7-icons" onclick="admin_search('karyawan')">search</i></span>
+                  <input style="width: 85%;" type="text" name="admin_karyawan_search" id="admin_karyawan_search" placeholder="Cari Karyawan">
+                </div>
+            </div>
+        </div>
+        <div class="block" style="margin: 1rem 0;">
+            <p style="color: #9B9B9B;"><b>Semua Karyawan</b></p>
+        </div>
+
+        <div id="karyawan_list" class="karyawan-list" style="margin-bottom: 5rem;">
+            <!-- <div class="card">
+                <h5>Nama Karyawan</h5>
+                <label>status kasir/driver</label><br>
+                <label>no telepon</label><br>
+                <p>cabang restaurean</p>
+            </div>
+            <div class="card">
+                <h5>Nama Karyawan</h5>
+                <label>status kasir/driver</label><br>
+                <label>no telepon</label><br>
+                <p>cabang restaurean</p>
+            </div>
+            <div class="card">
+                <h5>Nama Karyawan</h5>
+                <label>status kasir/driver</label><br>
+                <label>no telepon</label><br>
+                <p>cabang restaurean</p>
+            </div> -->
+        </div>
+
+    </div>
+</div>

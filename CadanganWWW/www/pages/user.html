@@ -1,0 +1,215 @@
+<div class="page">
+    <!-- DRIVER TOOLBAR-->
+	<div class="driver_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/pesanan/" class="tab-link">
+				<i class="f7-icons">bag_fill</i>
+				<span class="tabbar-label">Pesanan</span>
+			  </a>
+			<a href="/riwayat/" class="tab-link">
+				<i class="f7-icons">car_fill</i>
+				<span class="tabbar-label">Riwayat</span>
+			  </a>
+			  <a href="/profile/" class="tab-link tab-link-active">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+	</div>
+	<!-- KASIR TOOLBAR -->
+	<div class="kasir_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/beranda/" class="tab-link">
+				<i class="f7-icons">printer_fill</i>
+				<span class="tabbar-label">Kasir</span>
+			  </a>
+			<a href="/stok/" class="tab-link">
+				<i class="f7-icons">rectangle_grid_2x2_fill</i>
+				<span class="tabbar-label">Stok</span>
+			  </a>
+			<a href="/riwayat/" class="tab-link">
+				<i class="f7-icons">doc_text_fill</i>
+				<span class="tabbar-label">Riwayat</span>
+			  </a>
+			  <a href="/profile/" class="tab-link tab-link-active">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+    </div>
+	<!-- CUSTOMER TOOLBAR -->
+	<div class="customer_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/beranda/" class="tab-link">
+				<i class="f7-icons">house_fill</i>
+				<span class="tabbar-label">Beranda</span>
+			  </a>
+			<a href="/pesanan/" class="tab-link">
+				<i class="f7-icons">bag_fill</i>
+				<span class="tabbar-label">Pesanan</span>
+			  </a>
+			  <a href="/profile/" class="tab-link tab-link-active">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+	</div>
+	<!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link tab-link-active">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+	<!-- MODAL LOGUT -->
+	<div id="modlogout" class="modpass">
+		<div class="modcon">
+			<h3 style="margin-bottom: 2rem;">Log Out</h3>
+			<h5 style="margin-bottom: 2rem;">Anda yakin ingin logout ?</h5>
+			<div class="row" style="margin-right: 1.5rem;">
+				<div class="col-50"><a onclick="TutupModal('modlogout')" class="button button-fill tutup-btn">Tutup</a></div>
+				<div class="col-50"><a onclick="LogOut()" id="btn-logout" class="button button-fill ganti-btn">Log Out</a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MODAL GANTI NAMA -->
+	<div id="modn" class="modpass">
+		<div class="modcon">
+			<h5>Ganti Nama</h5>		
+			<h4>Nama Baru
+				<label class="asterisk-input"></label>
+			</h4>
+			<div class="mytextbox">
+				<input type="text" class="modn_input" id="input-namabaru">
+			</div>
+			<div class="row" style="margin-right: 1.5rem;">
+				<div class="col-50"><a onclick="TutupModal('modn')" class="button button-fill tutup-btn">Tutup</a></div>
+				<div class="col-50"><a onclick="GantiNama()" class="button button-fill ganti-btn">Ganti Nama</a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MODAL GANTI TELEPON -->
+	<div id="modt" class="modpass">
+		<div class="modcon">
+			<h5>Ganti Nomor Telepon</h5>		
+			<h4>No. Telepon Baru
+				<label class="asterisk-input"></label>
+			</h4>
+			<div class="mytextbox">
+				<input type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" class="modt_input" id="input-telpbaru">
+			</div>
+			<div class="row" style="margin-right: 1.5rem;">
+				<div class="col-50"><a onclick="TutupModal('modt')" class="button button-fill tutup-btn">Tutup</a></div>
+				<div class="col-50"><a onclick="GantiTelepon()" class="button button-fill ganti-btn">Ganti Telepon</a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MODAL GANTI EMAIL -->
+	<div id="modem" class="modpass">
+		<div class="modcon">
+			<h5>Ganti Email</h5>		
+			<h4>Email Baru
+				<label class="asterisk-input"></label>
+			</h4>
+			<div class="mytextbox">
+				<input type="text" class="modem_input" id="input-emailbaru">
+			</div>
+			<div class="row" style="margin-right: 1.5rem;">
+				<div class="col-50"><a onclick="TutupModal('modem')" class="button button-fill tutup-btn">Tutup</a></div>
+				<div class="col-50"><a onclick="GantiEmail()" class="button button-fill ganti-btn">Ganti Email</a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MODAL GANTI PASSWORD -->
+	<div id="modp" class="modpass">
+		<div class="modcon">
+			<h5>Ganti Password</h5>		
+			<h4>Password Lama
+				<label class="asterisk-input"></label>
+			</h4>
+			<div class="mytextbox">
+				<input type="password" class="modp_input" id="input-passlama">
+				<span>
+					<i id="eye-passlama" class="fa fa-eye" aria-hidden="true"></i>
+				</span>
+			</div><br>
+			<h4>Password Baru
+				<label class="asterisk-input"></label>
+			</h4>
+			<div class="mytextbox">
+				<input type="password" class="modp_input" id="input-passbaru">
+				<span>
+					<i id="eye-passbaru" class="fa fa-eye" aria-hidden="true"></i>
+				</span>
+			</div>
+			<div class="row">
+				<div class="col-50"><a onclick="TutupModal('modp')" class="button button-fill tutup-btn">Tutup</a></div>
+				<div class="col-50"><a onclick="GantiPassword()" class="button button-fill ganti-btn">Ganti Password</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-content profile-page  bg-custom">
+		<!-- TITLE -->
+		<div class="head-profile">
+			<h3 id="myname">Hai, JohD</h3>
+			<h5 id="myusername">Username: johnd</h5>
+		</div>
+
+		<!-- DRIVER/KASIR/ADMIN MENU -->
+        <!-- <section class="section_driver_kasir_admin" id="kasir-driver-profile">
+			<div class="card no-boxshadow">
+				<h4>Nama</h4>
+				<label id="karyawan-name">John Doe</label>
+			</div>
+			<div class="card no-boxshadow">
+				<h4>Telepon</h4>
+            	<label id="karyawan-phone">xxxx-xxxx-xxxx</label>
+			</div>
+			<div class="card no-boxshadow">
+				<h4>Email</h4>
+            	<label id="karyawan-email">example@gmail.com</label>
+			</div>
+		</section> -->
+
+		<!-- CUSTOMER MENU -->
+		<section class="section_customer" id="customer-profile">
+			<div class="card no-boxshadow">
+				<h4>Nama</h4>
+				<label id="customer-name">John Doe</label>
+				<span style="float: right;" onclick="BukaModal('modn')"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+			</div>
+			<div class="card no-boxshadow">
+				<h4>Telepon</h4>
+				<label id="customer-phone">xxxx-xxxx-xxxx</label>
+				<span style="float: right;" onclick="BukaModal('modt')"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+			</div>
+			<div class="card no-boxshadow">
+				<h4>Email</h4>
+				<label id="customer-email">example@gmail.com</label>
+				<span style="float: right;" onclick="BukaModal('modem')"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+			</div>
+		</section>
+
+        <!-- CHANGE PASS + LOGOUT -->
+        <div id="btn-gantipass" class="card no-boxshadow" style="margin-top: 2rem;">
+            <h4 style="display: inline-block;" >Change Password</h4>
+            <span style="float: right;" onclick="BukaModal('modp')"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+        </div>
+        <div class="card no-boxshadow">
+            <h4 onclick="BukaModal('modlogout')">Log Out</h4>
+        </div>
+
+    </div>
+</div>

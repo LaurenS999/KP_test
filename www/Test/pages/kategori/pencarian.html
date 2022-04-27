@@ -1,0 +1,122 @@
+<div class="page">
+    <!-- CUSTOMER TOOLBAR -->
+    <div class="customer_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/pesanan/" class="tab-link">
+                <i class="f7-icons">bag_fill</i>
+                <span class="tabbar-label">Pesanan</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- KASIR TOOLBAR -->
+    <div class="kasir_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">printer_fill</i>
+                <span class="tabbar-label">Kasir</span>
+            </a>
+            <a href="/stok/" class="tab-link">
+                <i class="f7-icons">rectangle_grid_2x2_fill</i>
+                <span class="tabbar-label">Stok</span>
+            </a>
+            <a href="/riwayat/" class="tab-link">
+                <i class="f7-icons">doc_text_fill</i>
+                <span class="tabbar-label">Riwayat</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- FAB BUTTON KERANJANG {CUSTOMER} -->
+    <div class="fab-customer fab fab-extended fab-center-bottom color-red fab_keranjang">
+        <a href="/keranjang/">
+            <i style="font-size: 20px;" class="f7-icons">cart</i>
+            <div class="fab-text" style="font-size: 10px;">Keranjang</div>
+        </a>
+    </div>
+
+    <!-- MODAL MENU DETIL -->
+    <div id="Pencarian_MenuModal" class="modal-menu">
+        <div class="modal-menu-con">
+            <img src="./img/drawable-ldpi/Logo.png" alt="">
+            <div>
+                <h4 id="Pencarian_MenuModal_nama"></h4>
+                <p id="Pencarian_MenuModal_deskripsi"></p>
+                <h4 id="Pencarian_MenuModal_harga"></h4>
+                <h4 id="Pencarian_MenuModal_harga-diskon"></h4>
+                <h4 id="Pencarian_MenuModal_id" hidden></h4>
+            </div>
+            <div class="box-button">
+                <a onclick="Kurang('Pencarian_MenuModal')" class="button btn-mns"><i class="fa fa-minus"></i></a>
+                <label id="Pencarian_MenuModal_JumlahPesanan">0</label>
+                <a onclick="Tambah('Pencarian_MenuModal')" class="button btn-pls"><i class="fa fa-plus"></i></a>
+            </div>
+            <a class="button button-fill" onclick="MasukKeranjang('Pencarian_MenuModal')">Tambah Keranjang</a>
+        </div>
+    </div>
+
+    <div class="page-content bg-custom">
+        <!-- TITLE / NAVBAR -->
+        <div class="navbar" style="margin-bottom: 1rem; color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/beranda/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title">Pencarian</div>
+            </div>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="pencarian">
+            <div class="list">
+                <div class="mytextbox">
+                  <span class="SearchMenu_Span"><i class="f7-icons">search</i></span>
+                  <input type="text" value="" name="Pencarian_seach" id="Pencarian_seach" placeholder="Cari menu disini...">
+                </div>
+            </div>
+        </div>
+        <div class="block" style="margin: 1rem 0;">
+            <p style="color: #9B9B9B;"><b>Hasil pencarian "<label id="textSearch">Pizza</label>"</b></p>
+        </div>
+
+        <!-- KATEGEORI LIST -->
+        <div id="Pencarian_MenuList" class="kasir-listmenu block" style="margin-bottom: 5rem; padding: .3rem;">        
+            <!-- ISI VIA JS -->
+            <!-- <a style="color: black;">
+                <div class="card">
+                    <div class="card-content card-content-padding">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="">
+                        <h5>nama menu</h5><br>
+                        <p style="color: #808080; font-size: 11px;">menu deskripsi ini enak ini paiot in imurah</p><br>
+                        <h5>Rp. 50.000</h5>
+                    </div>
+                </div>
+            </a>
+            <a style="color: black;">
+                <div class="card">
+                    <div class="card-content card-content-padding">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="">
+                        <h5>nama menu</h5><br>
+                        <p style="color: #808080; font-size: 11px;">menu deskripsi ini enak ini paiot in imurah</p><br>
+                        <h5>Rp. 50.000</h5>
+                    </div>
+                </div>
+            </a> -->
+        </div>
+
+    </div>
+</div>

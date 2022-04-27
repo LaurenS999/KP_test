@@ -1,0 +1,125 @@
+<div class="page">
+    <!-- CUSTOMER TOOLBAR -->
+    <div class="customer_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/pesanan/" class="tab-link">
+                <i class="f7-icons">bag_fill</i>
+                <span class="tabbar-label">Pesanan</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+    <!-- KASIR TOOLBAR -->
+    <div class="kasir_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">printer_fill</i>
+                <span class="tabbar-label">Kasir</span>
+            </a>
+            <a href="/stok/" class="tab-link">
+                <i class="f7-icons">rectangle_grid_2x2_fill</i>
+                <span class="tabbar-label">Stok</span>
+            </a>
+            <a href="/riwayat/" class="tab-link">
+                <i class="f7-icons">doc_text_fill</i>
+                <span class="tabbar-label">Riwayat</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- FAB BUTTON KERANJANG {CUSTOMER} -->
+    <div class="fab-customer fab fab-extended fab-center-bottom color-red fab_keranjang">
+        <a href="//">
+            <i style="font-size: 20px;" class="f7-icons">cart</i>
+            <div class="fab-text" style="font-size: 10px;">Keranjang</div>
+        </a>
+    </div>
+
+    <!-- FAB BUTTON KATEGORI {ADMIN} -->
+    <div style="width: 170px;" class="fab-customer fab-admin fab fab-extended fab-center-bottom color-red">
+        <a href="/kategoriedit/0">
+            <i style="font-size: 20px;" class="f7-icons">plus</i>
+            <div class="fab-text" style="font-size: 10px;">Tambah Kategori</div>
+        </a>
+    </div>
+
+    <div class="page-content bg-custom">
+        <!-- TITLE / NAVBAR -->
+        <div class="navbar" style="margin-bottom: 1rem; color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/beranda/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title">Kategori</div>
+            </div>
+        </div>
+
+        <!-- SEARCH (ADMIN)-->
+        <div class="pencarian admin-cari">
+            <div class="list">
+                <div class="mytextbox">
+                  <span class="SearchMenu"><i class="f7-icons" onclick="admin_search('kategori')">search</i></span>
+                  <input style="width: 85%;" type="text" name="admin_kategori_search" id="admin_kategori_search" placeholder="Cari Kategori">
+                </div>
+            </div>
+        </div>
+
+        <div class="block" style="margin: 1rem 0;">
+            <p style="color: #9B9B9B;"><b>Semua Kategori</b></p>
+        </div>
+
+        <!-- LIST KATEGORI -->
+        <div class="block" style="margin: 0; padding: 0;">
+            <div class="list links-list" id='kategoriStatNull'>
+                <ul id="listkategori">
+                    <!-- ISI VIA JS -->
+                    <!-- <li style='padding: 8px 15px; border-bottom: 1px solid rgba(0,0,0,0.1);'>             
+                            <a href="/kategoriedit/'+ obj[i]['category_id']'">
+                                <div><img style='width: 4rem;' src='./img/drawable-ldpi/Logo.png'></div>
+                                <div style='width: 95%;'>" +  obj[i]['category_name'] </div>
+                            </a>
+                        </li>
+                    <li style='margin-bottom: 2px;'>                  
+                        <a href='//'>
+                            <div><img style='width: 4rem;' src='./img/drawable-ldpi/Logo.png'></div>
+                            <div style='width: 95%;'>Makanan</div>
+                        </a>
+                    </li>
+                    <li style='margin-bottom: 2px;'>                  
+                        <a href='//'>
+                            <div><img style='width: 4rem;' src='./img/drawable-ldpi/Logo.png'></div>
+                            <div style='width: 95%;'>Makanan</div>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>

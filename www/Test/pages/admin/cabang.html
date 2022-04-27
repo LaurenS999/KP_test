@@ -1,0 +1,70 @@
+<div class="page">
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- FAB BUTTON CABANG (ADMIN) -->
+    <div style="width: 55%; max-width: 180px;" class="fab-kasir fab fab-extended fab-center-bottom color-red">
+        <a href="/cabangdetil/0">
+            <i style="font-size: 20px;" class="f7-icons">plus</i>
+            <div class="fab-text" style="font-size: 10px; padding-right: 1rem;">Tambah Cabang</div>
+        </a>
+    </div>
+    
+    <div class="page-content bg-custom">
+        <!-- TITLE -->
+        <div class="navbar" style="margin-bottom: 1rem; color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/beranda/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title">Daftar Cabang</div>
+            </div>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="pencarian">
+            <div class="list">
+                <div class="mytextbox">
+                  <span class="SearchMenu_Span"><i class="f7-icons" onclick="admin_search('cabang')">search</i></span>
+                  <input style="width: 85%;" type="text" name="admin_cabang_search" id="admin_cabang_search" placeholder="Cari Cabang">
+                </div>
+            </div>
+        </div>
+        <div class="block" style="margin: 1rem 0;">
+            <p style="color: #9B9B9B;"><b>Semua Cabang</b></p>
+        </div>
+
+        <!-- CABANG LIST -->
+        <div id="admin_cabanglist" class="cabang-list" style="margin-bottom: 2rem;">
+            <!-- <div class="card">
+                <h5>Restaurant #001</h5>
+                <label>alamat</label><br>
+                <label>telepon</label>
+            </div>
+            <div class="card">
+                <h5>Restaurant #001</h5>
+                <label>alamat</label><br>
+                <label>telepon</label>
+            </div>
+            <div class="card">
+                <h5>Restaurant #001</h5>
+                <label>alamat</label><br>
+                <label>telepon</label>
+            </div> -->
+        </div>
+
+    </div>
+</div>

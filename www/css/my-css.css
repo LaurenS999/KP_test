@@ -1,0 +1,1314 @@
+/*  =====
+GLOBAL
+===== */
+.list ul:before {
+    background-color: transparent;
+}
+
+.img-box {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.img-content {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.list ul:after {
+    background-color: transparent;
+}
+
+.google_maps{
+    height: 250px;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+textarea {
+    width: 100%;
+}
+
+.no-boxshadow {
+    box-shadow: none;
+}
+
+.links-list a::after {
+    background-color: transparent;
+} 
+
+.bg-custom {
+    background-color: #F2F2F2;
+    padding-bottom: 4rem;
+}
+
+
+.mytextbox {
+    margin-top: 7px;
+    padding: 0 .5rem;
+    border: 1px solid #707070;
+    border-radius: .5rem;
+}
+
+.pencarian .list .mytextbox input::placeholder {
+    opacity: 0.9;
+    color: #042035;
+}
+
+.mytextbox input {
+    height: 30px;
+    width: 100%;
+}
+
+.toolbar .toolbar-inner a i {
+    font-size: 1.5rem;
+}
+
+.my-combobox {
+    display: flex;
+}
+
+.my-combobox i {
+    font-size: 17px;
+    color: grey;
+    margin-top: 6px;
+}
+
+
+.mybtn {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+}
+/*  =====
+    CONTENT LIST
+    ===== */
+.content-list * {
+    padding: 0;
+    margin: 0;
+}
+
+.content-list a {
+    display: grid;
+    grid-template-columns: 90px 75%;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    color: black;
+}
+
+.content-list a img {
+    width: 70px;
+    height: 70px;
+    border-radius: 1rem;
+    padding: .5rem 0;
+    object-fit: cover;
+}
+
+.content-list .menu-info {
+    padding-top: .5rem;
+}
+
+.content-list .menu-info .price {
+    display: inline;
+}
+
+/* COMBOBOX STOK / PILIH CABANG */
+.pilihcabang .card .card-content {
+    position: relative;
+}
+.pilihcabang .card .card-content span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-right: 15px;
+}
+
+/*  =====
+    BUTTON + CONTENT BOX
+    ===== */
+.content-box .img-section {
+    display: grid;
+    grid-template-columns: 140px 140px;
+}
+
+.content-box .card {
+    margin: 0;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.content-box input {
+    margin-top: 7px;
+    width: 100%;
+    height: 35px;
+    padding: 0 1rem;
+    border-radius: .5rem;
+    border: 1px solid #707070;
+}
+
+.content-box .img-section a {
+    margin: 2rem auto;
+}
+
+.content-box .img-title {
+    margin-bottom: 1rem;
+}
+
+.content-box img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.password-section {
+    position: relative;
+}
+
+.password-section span {
+    position: absolute;
+    right: 13px;
+    top: 6.5px;
+}
+
+.double-button-box {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.double-button-box a {
+    width: 150px;
+    margin: auto;
+}
+
+.single-button-box {
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+}
+
+.single-button-box a {
+    margin: auto;
+    margin-top: 1rem;
+}
+
+/*  =====
+    SEARCH BOX 
+    =====*/
+.pencarian .list {
+    margin: 0 1rem;
+}
+
+.pencarian .media-list {
+    margin: 0;
+}
+
+.pencarian .list input {
+    width: 88%; 
+    margin-left: 10px;
+}
+
+.pencarian span {
+    color: black; 
+    position: absolute; 
+    bottom:3px;
+    right: 7px;
+}
+
+.pencarian .kategori-text {
+    color: #2C303E; 
+    width: 50%; 
+    font-weight: bold;
+}
+
+.pencarian .see-all {
+    width: 50%; 
+    text-align: right;
+}
+
+.pencarian a {
+    color: #E65934; 
+    font-weight: bold; 
+    text-align: right;
+}
+
+
+/*  =====
+    LOGIN + REGISTER + CHANGE PASSWORD
+    ===== */
+.login-logo {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.register-title {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+.form-ajax-login, .form-ajax-regis, .form-ajax-regis2 {
+    margin: auto;
+    width: 70%;
+}
+
+.head-login ul li, .head-regis ul li {
+    margin-bottom: 1.5rem;
+}
+
+.form-ajax-login .password input, .form-ajax-regis .password input, .form-ajax-regis2 .password input {
+    padding-right: 2rem;
+    display: inline;
+}
+
+.form-ajax-login .password span, .form-ajax-regis2 .password span {
+    position: absolute;
+    right: 1rem;
+    bottom: .5rem;
+    color: #E3E3E3;
+}
+
+.foot-regis, .foot-login {
+    text-align: center;
+}
+
+
+/*  =====
+    USER
+    =====  */
+.head-profile {
+    background-color: #04203E;
+    padding: .5rem 1rem;
+    color: white;
+}
+
+.head-profile h3, .head-profile h5 {
+    margin: 1rem 0;
+}
+
+.profile-page .card {
+    margin: .5rem 0;
+    padding: .5rem 1rem;
+    border-radius: 0;
+}
+
+.modpass {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -99;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    transition: all 0.1s linear;
+}
+
+.modcon {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    color: #04203E;
+}
+
+.modcon h5 {
+    color: #9B9B9B;
+    margin-bottom: 1rem;
+}
+
+.modcon span {
+    float: right;
+    position: relative;
+    bottom: 1.7rem;
+    right: .5rem;
+    color: #E3E3E3;
+}
+
+.modcon input {
+    display: inline;
+    height: 2rem;
+    width: 100%;
+    padding-right: 2rem;
+}
+
+.modcon .row {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+.modcon .ganti-btn, .modcon .tutup-btn {
+    border-radius: 20px;
+    color: white;
+}
+
+.modcon .tutup-btn {
+    background: #9B9B9B;
+}
+
+.modcon .ganti-btn {
+    background: #04203E;
+}
+
+.modcon .row a {
+    font-size: 8px;
+}
+
+
+/*  =====
+    PESANAN
+    ===== */
+.title-customer, .title-driver-kasir {
+    padding: 1rem;
+    background: white;
+}
+
+.status-customer, .status-driver, .status-kasir {
+    padding: 1rem;
+    text-align: center;
+}
+
+.status-customer a, .status-driver a, .status-kasir a {
+    color: #9B9B9B;
+}
+
+.status-customer div, .status-driver div, .status-kasir div {
+    border-bottom: 2px solid #9B9B9B;
+}
+
+.status-customer .activated, .status-driver .activated, .status-kasir .activated {
+    color: #F32E25;
+    border-bottom: 2px solid #F32E25;
+}
+
+.activated a {
+    color: #F32E25;
+}
+
+.content-pesanan p {
+    margin: 0;
+}
+
+.content-pesanan .col-33 p {
+    color: #4A90E2;
+}
+
+.content-pesanan .card {
+    margin: .5rem;
+}
+
+.content-pesanan .card .card-content, .content-pesanan .card .card-footer {
+    padding: .5rem 1rem;
+}
+
+
+/*  =====
+    BERANDA
+    ===== */
+.head-beranda {
+    padding: 1rem;
+    background-color: #04203E;
+}
+
+.head-beranda .col-33 {
+    margin: 0.5rem 0;
+    color: white;
+    font-weight: bold;
+    align-self: center;
+    text-align: center;
+}
+
+.head-beranda .col-33 h3 {
+    text-align: center;
+    color: white;
+}
+
+.head-beranda .col-66 {
+    color: white;
+    vertical-align: middle;
+    padding-left: .3rem;
+    /* border-left: 1px solid #fff; */
+}
+
+.head-beranda .col-66 div span{
+    float: right;
+    top: 1rem;
+    right: 1rem;
+    z-index: 99;
+    position: absolute;
+}
+
+.head-beranda .col-66 div h5 {
+    margin: 0;
+}
+
+/*  =====
+    BERANDA (ADMIN)
+    ===== */
+.admin-profile {
+    border-radius: 0 0 15px 15px;
+}
+
+.admin-profile h3 , .admin-profile p {
+    margin: 0;
+}
+
+.admin-konfigurasi {
+    margin: 1rem;
+    background: white;
+    border-radius: 15px;
+}
+
+.admin-profile .list {
+    margin: 1rem 0;
+    padding: 1rem;
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    justify-content: space-around;
+}
+
+.admin-konfigurasi .list {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.admin-profile .list a, .admin-konfigurasi .list a {
+    display: flex;
+    flex-direction: column;
+    color: #04203E;
+    align-items: center;
+    font-size: 12px;
+}
+
+.admin-konfigurasi .list a {
+    color: black;
+    font-weight: 500;
+}
+
+.admin-profile .list a i, .admin-konfigurasi .list a i {
+    font-size: 25px;
+}
+
+.admin-konfigurasi img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/*  =====
+    CUSTOMER PROMO
+    ===== */
+.customer-promo {
+    padding: 0; 
+    margin: 0rem 1rem;
+}
+
+.customer-promo h3 {
+    font-weight: bold;
+}
+
+.mypromo {
+    padding: .5rem;
+}
+
+.mypromo  .column{
+    margin: .5rem;
+    padding: .3rem;
+    max-width: 11rem;
+}
+
+.mypromo  .column p{
+    margin: 0;
+}
+
+.mypromo  .column img{
+    max-width: 9rem;
+}
+
+.mypromo .card {
+    max-width: 10rem;
+    display: flex;
+}
+
+.mypromo .card .card-content{
+    width: 8rem;
+    text-align: center;
+}
+
+.mypromo .card .card-content * {
+    margin: 0;
+}
+
+.mypromo .card .card-content img {
+    width: 7rem;
+    height: 7rem;
+}
+
+
+/*  =====
+    KASIR STATUS
+    ===== */
+.statusberanda-kasir .row {
+    max-height: 5rem;
+    padding: .4rem;
+    margin-top: 1rem;
+}
+
+.statusberanda-kasir img {
+    max-width: 4.5rem;
+    max-height: 4.5rem;  
+    float: left; 
+    margin-top: .5rem;
+}
+
+.statusberanda-kasir .row .col-66 h2 {
+    color: #67605F;
+    margin: 1rem 0;
+}
+
+.statusberanda-kasir .row .col-66 {
+    height: 3.9rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 376px)
+{
+    .statusberanda-kasir .row .col-66 {
+        height: 3.9rem;
+    }
+
+    .statusberanda-kasir .row .col-66 h2 {
+        color: #67605F;
+        margin: 0 0;
+    }
+
+    .statusberanda-kasir img {
+        margin-top: .5rem;
+    }
+}
+
+@media screen and (max-width: 280px)
+{
+    .statusberanda-kasir .row .col-66 {
+        height: 5.1rem;
+    }
+
+    .statusberanda-kasir .row .col-66 h2 {
+        color: #67605F;
+        margin:0.5rem 0;
+    }
+
+    .statusberanda-kasir img {
+        margin-top: 1rem;
+    }
+}
+
+.statusberanda-kasir .row .col-66, .statusberanda-kasir .row .col-33 {
+    margin: 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.2);
+}
+
+
+/*  =====
+    KATEGORI LIST (BOX KATEGORI) 
+    =====*/
+.mycolumn {
+    display: flex;
+    overflow: hidden;
+    background-color: #F2F2F2;
+}
+
+.mycolumn div{
+    box-shadow: 1px 3px 0px 0px #0000000F;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.mycolumn div {
+    max-width: 5rem;
+    max-height: 5rem;
+    text-align: center;
+}
+
+.mycolumn div img {
+    width: 5rem;
+    height: 3.5rem;
+    overflow: hidden;
+}
+
+.mycolumn div label {
+    margin: auto;
+}
+
+
+/*  =====
+    KATEGORI LIST (KASIR DEFAULT) 
+    =====*/
+.kasir-listmenu {
+    padding: 0;
+    margin-top: .7rem;
+    margin-bottom: .5rem;
+}
+
+.kasir-listmenu .card .card-content {
+    padding: 0 .6rem;
+    min-height: 5rem;
+}
+
+.kasir-listmenu .card .card-content img {
+    width: 5rem;
+    height: 5rem;
+    float: left;
+    margin-right: 5px;
+}
+
+.kasir-listmenu .card .card-content h5, .kasir-listmenu .card .card-content p {
+    margin: 0;
+    display: inline;
+}
+
+.kasir-listmenu .card .card-content div {
+    background-color: #F32E25;
+    float: right;
+    color: white;
+    min-width: 1rem;
+    text-align: center;
+    border-radius: 2px;
+    margin-top: -.5rem;
+    margin-right: -.6rem;
+    padding: 3px;
+}
+
+
+/*  =====
+    KERANJANG + DETIL PESANAN + DETIL RIWAYAT
+    ===== */
+.keranjang-customer, .keranjang-kasir {
+    padding-bottom: 1rem;
+}
+
+.keranjang-customer .card, .keranjang-kasir .card {
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: .5rem 1rem;
+    border-radius: 0;
+}
+
+.keranjang-customer .card *, .keranjang-kasir .card *{
+    margin: 0;
+    font-size: 12px;
+}
+
+.keranjang-customer .card-content, .keranjang-customer .card .row, .keranjang-kasir .card-content, .keranjang-kasir .card .row  {
+    padding: .5rem;
+}
+
+.keranjang-customer .row, .keranjang-kasir .row {
+    padding: .5rem 1rem;
+}
+
+.keranjang-customer .mytextbox, .keranjang-kasir .mytextbox {
+    height: 40px;
+    margin-top: 7px;
+}
+
+.detailpesanan * {
+    font-size: 12px;
+}
+
+.detailpesanan .detil_price {
+    text-align: end;
+}
+
+.detailpesanan .detil_name {
+    width: 3rem;
+}
+
+.detailpesanan img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.detailpesanan table {
+    padding-left: .8rem;
+    padding-right: 1rem;
+    width: 100%;
+    background: white;
+}
+
+/* .keranjang-customer .detailpesanan, .keranjang-kasir .detailpesanan {
+    padding: 0;
+    margin-bottom: .5rem;
+}
+
+.keranjang-customer .detailpesanan .list, .keranjang-kasir .detailpesanan .list {
+    margin: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.keranjang-customer .detailpesanan .list .item-content, .keranjang-kasir .detailpesanan .list .item-content {
+    padding: 0 .5rem;
+}
+
+.keranjang-customer .detailpesanan img, .keranjang-kasir .detailpesanan img {
+    max-width: 3rem;
+    max-height: 3rem;
+    float: left;
+    vertical-align: text-top;
+}
+
+.keranjang-customer .detailpesanan h6, .keranjang-kasir .detailpesanan h6 {
+    display: inline;
+}
+
+.keranjang-customer .detailpesanan .col-25, .keranjang-kasir .detailpesanan .col-25 {
+    font-size: 12px;
+} */
+
+.keranjang-kasir input {
+    height: 30px;
+    width: 100%;
+}
+
+.mod-jenisbayar {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -11;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    transition: all 0.1s linear;
+}
+
+.mod-jenis-con {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    max-width: 300px;
+    color: #04203E;
+}
+
+.mod-jenis-con h5 {
+    color: #9B9B9B;
+    margin-bottom: 1rem;
+}
+
+.mod-jenis-con .row {
+    position: relative;
+    left: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.mod-jenis-con .row a {
+    padding: 1rem;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.modal-pembayaran {
+    text-align: center;
+}
+
+
+/*  =====
+    MODAL UMUM
+    ===== */
+.modal-menu {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1000;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    transition: all 0.1s linear;
+}
+
+.modal-menu-con {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    color: #04203E;
+}
+
+.modal-menu-con * {
+    margin: 0;
+    padding: 0;
+}
+
+.modal-menu-con img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.modal-menu-con select {
+    height: 25px;
+    width: 100%;
+    padding: 0 .3rem;
+    overflow: hidden;
+}
+
+/* .modal-menu-con .combobox span {
+    display: inline;
+    position: absolute;
+    right: 1rem;
+} */
+
+.modal-menu-con a {
+    border-radius: 20px;
+}
+
+.modal-menu-con .box-button {
+    padding: .5rem;
+    text-align: center;
+}
+
+.modal-menu-con i {
+    position: relative;
+    bottom: .3rem;
+    color: white;
+    font-size: 10px;
+}
+
+.modal-menu-con .btn-pls, .modal-menu-con .btn-mns, .modal-menu-con .btn-mns-warning {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.modal-menu-con .button {
+    background: #04203E;
+    font-size: 13px;
+}
+
+.modal-menu-con .btn-mns-warning {
+    background-color: red;
+}
+
+.modal-menu-con .btn-mns {
+    background: #9B9B9B;
+}
+
+.modal-menu-con .btn-pls {
+    background: #58D079;
+}
+
+
+/*  =====
+    DETIL PESANAN MODAL
+    ===== */
+.list-pesan-detil {
+    margin: 1rem 0;
+}
+
+.list-pesan-detil .item-pesandetil {
+    margin-bottom: 1rem;
+}
+
+.list-pesan-detil .btn-group {
+    float: right;
+}
+
+.list-pesan-detil .btn-group, .list-pesan-detil h5 {
+    display: inline-block;
+}
+
+.list-pesan-detil .btn-trsh{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    border-radius: 5px;
+    background: #F32E25;
+}
+
+
+/*  =====
+    RIWAYAT
+    ===== */
+.pilih-kasir-admin h4 {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.pilih-kasir-admin .card-content div {
+    display: inline-block;
+}
+
+.pilih-kasir-admin .tanggal {
+    padding: .5rem; 
+    padding-left: 5%;
+}
+
+.pilih-kasir-admin p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.listriwayat-kasir-admin * {
+    margin: 0;
+}
+
+.listriwayat-kasir-admin .card-footer {
+    padding: 0;
+    padding-top: 1rem;
+}
+
+.listriwayat-kasir-admin p {
+    font-size: 10px;
+}
+
+.listriwayat-kasir-admin h5 {
+    display: inline;
+}
+
+.listriwayat-kasir-admin .list {
+    margin-top: .5rem;
+}
+
+.listriwayat-kasir-admin .card {
+    margin: .5rem 0;
+    padding: .7rem;
+}
+
+
+/*  =====
+    CABANG + DETIL | KATEGORI DETIL
+    ===== */
+.cabang-list .card {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.cabang-info .card, .karyawan-info .card {
+    margin: 0;
+    padding: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.karyawan-info .img-box {
+    height: 100px;
+}
+
+.cabang-info input, .karyawan-info input {
+    width: 100%;
+    height: 30px;
+}
+
+.cabang-info .row {
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.cabang-info .row .col-50, .karyawan-info .row .col-50  {
+    max-width: 150px;
+}
+
+/*  =====
+    BANNER  (ADMIN)
+    ===== */
+.banner-list .card-content * {
+    margin: 0;
+}
+
+.banner-detil .card {
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.banner-detil .row { 
+    padding: 1rem;
+}
+
+.banner-detil .row a {
+    margin: auto;
+    max-width: 250px;
+}
+
+.banner-detil .banner-detil-content .row {
+    padding: 0;
+}
+
+.banner-detil-content select {
+    height: 30px;
+    width: 100%;
+}
+
+.banner-detil-content label {
+    font-weight: 500;
+}
+
+
+/*  =====
+    KARYAWAN + DETIL (ADMIN)
+    ===== */
+.karyawan-list .card {
+    padding: 1rem;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+}
+
+.karyawan-list .card p {
+    margin-top: .1rem;
+    margin-bottom: 0;
+    color: #4A90E2;
+}
+
+.form-ajax-editkaryawan .card {
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.form-ajax-editkaryawan input {
+    height: 30px;
+    width: 100%;
+}
+
+.form-ajax-editkaryawan .password input {
+    padding-right: 2rem;
+}
+
+.form-ajax-editkaryawan span {
+    position: absolute;
+    right: 2rem;
+    bottom: 1.3rem;
+    color: #E3E3E3;
+}
+
+.form-ajax-editkaryawan .col-50 select {
+    height: 30px;
+    width: 90%;
+    display: inline;
+}
+
+.menu-pilihgambar {
+    display: inline-flex;
+}
+
+.menu-pilihgambar img {
+    height: 100px;
+    width: 100px;
+    display: inline-flex;
+    border-radius: 10px;
+}
+
+.menu-pilihgambar .menu-pilihgambar-content, .menu-pilihgambar-content a {
+    margin-top: .5rem;
+}
+
+
+/*  =====
+    JENIS BAYAR
+    ===== */
+.list-jenisbayar {
+    padding: 0 1rem;
+    background: white;
+}
+
+.list-jenisbayar a {
+    display: block;
+    padding: .5rem 0;
+    font-weight: 500;
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.list-jenisbayar a img {
+    width: 3rem;
+    height: 3rem;
+    vertical-align: middle;
+    display: inline;
+}
+
+.list-jenisbayar a div {
+    display: inline;
+}
+
+
+/*  =====
+    LAPORAN ADMIN
+    ===== */
+.status-laporan {
+    margin-top: 1.5rem;
+}
+
+.status-laporan .card {
+    padding: 1rem;
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.laporan-detil {
+    background: white;
+    margin-top: 1rem;
+}
+
+.listdetil-laporan {
+    margin-top: 1rem;
+}
+
+.listdetil-laporan .item-content{
+    margin: -1rem 0;
+}
+
+.listdetil-laporan .item-content h6 {
+    font-weight: normal;
+}
+    
+    
+    
+/*  =====
+    CAROUSEL / SLIDER 
+    =====*/
+.slider {
+    min-height: 100px;
+    width: 100%;
+    
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slides img {
+    width: 100%;
+}
+
+.slides::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+/* .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 0px;
+}
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+} */
+.slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    /* height: 300px; */
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+
+/* SLide Kategori */
+.slides-kategori {
+    display: flex;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.slides-kategori::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+/* .slides-kategori::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+.slides-kategori::-webkit-scrollbar-track {
+    background: transparent;
+} */
+.slides-kategori > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+input[type="number"] {
+   -moz-appearance: textfield;
+}
+
+.asterisk-input::after {
+    content:" *"; 
+    color: #e32;
+    opacity: 70%;
+    font-size: 20px;
+}

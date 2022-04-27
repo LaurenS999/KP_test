@@ -1,0 +1,57 @@
+<div class="page">
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="page-content bg-custom">
+        <!-- TITLE -->
+        <div class="navbar" style="color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/cabang/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title" id="cabang_titel_ubah">Ubah Cabang</div>
+                <div class="title" id="cabang_titel_tambah">Tambah Cabang</div>
+            </div>
+        </div>
+
+        <!-- FORM CONTENT -->
+        <div class="content-box">
+            <div class="card no-boxshadow">
+                <h4 id="cabangdetil_id" hidden></h4>
+                <h4>Nama<label class="asterisk-input"></label></h4>
+                <input type="text" name="cabangdetil_nama" id="cabangdetil_nama" placeholder="Ketik nama disini...">
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Alamat<label class="asterisk-input"></label></h4>
+                <input type="text" name="cabangdetil_Alamat" id="cabangdetil_Alamat" placeholder="Ketik alamat disini...">
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Telepon<label class="asterisk-input"></label></h4>
+                <input name="cabangdetil_telpon" id="cabangdetil_telpon" type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" placeholder="Ketik telepon disini...">
+            </div>
+        </div>
+
+        <div class="double-button-box" id="cabang_ubah">
+            <a class="button button-fill button-round" onclick="KonfirmasiHapus('cabang')">Hapus</a>
+            <a style="background: #04203E;" class="button button-fill button-round" onclick="UbahData('cabang')">Ubah</a>
+        </div>
+
+        <div class="single-button-box" id="cabang_tambah">
+            <a style="background: #04203E;" class="button button-fill button-round" onclick="TambahData('cabang')">Tambah</a>
+        </div>
+        
+    </div>
+</div>

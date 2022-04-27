@@ -1,0 +1,113 @@
+<div class="page">
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MODAL NOTIF -->
+	<div id="modnotif_banner" class="modpass">
+		<div class="modcon">
+			<h3 style="margin-bottom: 2rem; text-align: center;" id="modnotif_banner_pesan"></h3>			
+			<div class="row" style="margin-right: 1.5rem;">
+				<div class="col-100"><a onclick="TutupModal('modnotif_banner')" href="/banner/" class="button button-fill tutup-btn">OK</a></div>				
+			</div>
+		</div>
+	</div>
+
+    <div class="page-content bg-custom">
+        <!-- TITLE / NAVBAR -->
+        <div class="navbar" style="color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/banner/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title" id="banner_title">Ubah Banner</div>
+            </div>
+        </div>
+
+        <div class="banner-detil">
+            <h4 id="bannerdetil_id" hidden>Banner ID</h4>
+            <div class="card">
+                <h4>Nama Banner
+    				<label class="asterisk-input"></label>
+                </h4>
+                <div class="mytextbox" style="height: 1.7rem;">
+                    <input placeholder="Ketik nama banner disini..." type="text" name="banner_nama" id="banner_nama">
+                </div>
+            </div>
+            <div class="card">
+                <h4 style="margin-bottom: 1rem;">Gambar</h4>
+                <img id="banner_propic" name="banner_propic" style="width: 100%;" src="./img/drawable-ldpi/1200x628.png" alt="">
+                <a style="margin: auto; margin-top: 1rem; max-width: 250px; background: #9B9B9B;" class="button button-round button-fill" onclick="camera('banner')">Pilih</a>
+            </div>
+            <div style="border-bottom: none; margin: 0; padding: 0; padding-top: 1rem; text-align: center;" class="card">
+                <h4>Halaman Tujuan</h4>
+            </div>
+            <div class="card banner-detil-content no-boxshadow">
+                <div class="row">
+                    <div class="col-50">
+                        <input type="radio" name="radio" id="radio_kategori" onclick="admin_kategori_combobox(0)">
+                        <label>Kategori
+            				<label class="asterisk-input"></label>
+                        </label>
+                        <div class="mytextbox">
+                            <select name="banner_kategori_combobox" id="banner_kategori_combobox" class="category_combobox">
+                                <!-- <option value="">Burger</option>
+                                <option value="">Juice</option> -->
+                            </select>
+                        </div>
+                    </div>
+                    <div style="padding-left: 1rem; border-left: 1px solid #000;" class="col-50">
+                        <input type="radio" name="radio" id="radio_menu" onclick="admin_menu_combobox(0)">
+                        <label>Menu
+            				<label class="asterisk-input"></label>
+                        </label>
+                        <div class="mytextbox">
+                            <select name="banner_menu_combobox" id="banner_menu_combobox" class="menu_combobox">
+                                <!-- <option value="">gatau</option>
+                                <option value="">gatau</option> -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4>Cabang
+        				<label class="asterisk-input"></label>
+                    </h4>
+                    <div class="mytextbox">
+                        <select name="banner_cabang_combobox" id="banner_cabang_combobox" class="cabang_combobox">
+                            <!-- <option value="">Resto #01</option>
+                            <option value="">Resto #01</option> -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row" id="ubahBanner">
+                <div class="col-50">
+                    <a class="button button-fill button-round" onclick="HapusData('banner')">Hapus</a>
+                </div>
+                <div class="col-50">
+                    <a style="background-color: #04203E;" class="button button-fill button-round" onclick="UbahData('banner')">Ubah</a>
+                </div>
+            </div>
+            <div class="row" id="tambahBanner">
+                <div class="col-100">
+                    <a style="background-color: #04203E;" class="button button-fill button-round" onclick="TambahData('banner')">Tambah</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

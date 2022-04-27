@@ -1,0 +1,131 @@
+<div class="page">
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MODAL NOTIF -->
+	<div id="modnotif_karyawan" class="modpass">
+		<div class="modcon">
+			<h3 style="margin-bottom: 2rem; text-align: center;" id="modnotif_karyawan_pesan"></h3>			
+			<div class="row" style="margin-right: 1.5rem;">
+				<div class="col-100"><a onclick="TutupModal('modnotif_karyawan')" href="/karyawan/" class="button button-fill tutup-btn">OK</a></div>				
+			</div>
+		</div>
+	</div>
+    
+    <div class="page-content bg-custom">
+        <!-- TITLE / NAVBAR -->
+        <div class="navbar" style="color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/karyawan/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title" id="karyawandetil_title_ubah">Ubah Karyawan</div>
+                <div class="title" id="karyawandetil_title_tambah">Tambah Karyawan</div>
+            </div>
+        </div>
+
+        <form class="form-ajax-editkaryawan">
+            <div class="card">
+                <h4 id="karyawandetil_id" hidden>ID Karyawan</h4>
+                <h4>Nama
+    				<label class="asterisk-input"></label>
+                </h4>
+                <div class="mytextbox">
+                    <input type="text" id="karyawandetil_nama" name="karyawandetil_nama" placeholder="Ketik nama disini...">
+                </div>
+            </div>
+            <div class="card">
+                <h4>Username
+    				<label class="asterisk-input"></label>
+                </h4>
+                <div class="mytextbox">
+                    <input type="text" id="karyawandetil_username" name="karyawandetil_username" placeholder="Ketik username disini...">
+                </div>
+            </div>
+            <div class="card">
+                <h4>Email
+                    <label class="asterisk-input"></label>
+                </h4>
+                <div class="mytextbox">
+                    <input type="text" id="karyawandetil_email" name="karyawandetil_email" placeholder="Ketik email disini...">
+                </div>
+            </div>
+            <div class="card">
+                <h4>Telepon
+    				<label class="asterisk-input"></label>
+                </h4>
+                <div class="mytextbox">
+                    <input type="text" id="karyawandetil_telepon" name="karyawandetil_telepon" placeholder="Ketik telepon disini...">
+                </div>
+            </div>
+            <div class="card">
+                <h4>Password
+                    <label class="asterisk-input"></label>
+                </h4>
+                <div class="mytextbox password">
+                    <input type="password" id="karyawandetil_password" name="karyawandetil_password" placeholder="Ketik password disini...">
+                    <span>
+                        <i id="eye-password-karyawan" class="fa fa-eye" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row">
+                    <div class="col-50">
+                        <h4>Jabatan
+            				<label class="asterisk-input"></label>
+                        </h4>
+                        <div class="mytextbox my-combobox">
+                            <select name="karyawan_jabatan_combobox" id="karyawan_jabatan_combobox">
+                                <option value="Kasir" selected>Kasir</option>
+                                <option value="Driver">Driver</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+                            <i class="f7-icons">chevron_right</i>
+                        </div>
+                    </div>
+                    <div style="border-left: 1px solid black; padding-left: 1rem;" class="col-50">
+                        <h4>Cabang
+            				<label class="asterisk-input"></label>
+                        </h4>
+                        <div class="mytextbox my-combobox">
+                            <select name="karyawan_cabang_combobox" id="karyawan_cabang_combobox" class="cabang_combobox">
+                                <!-- <option value="">Resto #01</option>
+                                <option value="">Resto #01</option> -->
+                            </select>
+                            <i class="f7-icons">chevron_right</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding: 1rem;" id="karyawanedit_ubah">
+                <div class="col-50">
+                    <a style="margin: auto; max-width: 250px;" class="button button-fill button-round" onclick="HapusData('karyawan')">Hapus</a>
+                </div>
+                <div class="col-50">
+                    <a style="margin: auto; max-width: 250px; background: #04203E;" class="button button-fill button-round" onclick="UbahData('karyawan')">Ubah</a>
+                </div> 
+            </div>
+            <div class="row" style="padding: 1rem;" id="karyawanedit_tambah">
+                
+                <div class="col-100">
+                    <a style="margin: auto; background: #04203E;" class="button button-fill button-round" onclick="TambahData('karyawan')">Tambah</a>
+                </div> 
+            </div>
+        </form>
+
+    </div>
+</div>

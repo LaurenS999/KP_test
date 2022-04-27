@@ -1,0 +1,117 @@
+<div class="page">
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- FAB BUTTON (ADMIN) -->
+    <div style="width: 55%; max-width: 180px;" class="fab-kasir fab fab-extended fab-center-bottom color-red">
+        <a href="/menudetil/0">
+            <i style="font-size: 20px;" class="f7-icons">plus</i>
+            <div class="fab-text" style="font-size: 10px; padding-right: 1rem;">Tambah Menu</div>
+        </a>
+    </div>
+
+    <!-- MODAL PILIH CABANG -->
+    <div id="mod-menu-pilihcabang" class="mod-jenisbayar">
+        <div class="mod-jenis-con">
+            <h5>Pilih Cabang</h5>
+            <div class="row" onclick="listresto_function('menu','semuaresto','Semua Cabang','')">
+                <a>Semua Cabang</a>
+            </div>
+            <div id="mod_admin_pilihcabang_content" class="mod_pilihcabang_content">
+                <!-- <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div> -->
+            </div>
+            <div class="block" style="margin-bottom: 0; margin-top: 1rem;">
+                <div class="col-50"><a onclick="TutupModal('mod-menu-pilihcabang')" style="background: #9B9B9B;" class="button button-fill button-round">Tutup</a></div>
+            </div>           
+        </div>
+    </div>
+
+    <div class="page-content bg-custom">
+        <!-- ADMIN  TITLE  -->
+        <div class="navbar" style="color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/beranda/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title">Daftar Menu</div>
+            </div>
+        </div>
+
+        <!-- ADMIN PILIH CABANG -->
+        <div class="pilihcabang pilih-kasir-admin" onclick="BukaModal('mod-menu-pilihcabang')">
+            <h4>Pilih Cabang</h4>
+            <div class="card">
+                <div class="card-content">
+                    <div class="tanggal">
+                        <p><b id="menu_namaresto">Semua Cabang</b></p>
+                        <p style="color: #808080;" id="menu_alamatresto"></p>
+                        <p id="menu_idresto" hidden>semuaresto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="pencarian" style="margin-top: 2rem;">
+            <div class="list">
+                <div class="mytextbox">
+                  <span class=""><i class="f7-icons" onclick="admin_search('menu')">search</i></span>
+                  <input style="width: 85%;" type="text" name="admin_menu_search" id="admin_menu_search" placeholder="Cari Menu">
+                </div>
+            </div>
+        </div>
+        <div class="block" style="margin: 1rem 0;">
+            <p style="color: #9B9B9B;"><b>Semua Menu</b></p>
+        </div>
+
+        <!-- KASIR DEFAULT (KATEGEORI LIST) -->
+        <div id="admin_menulist" class="kasir-listmenu block" style="margin-bottom: 3.5rem; padding: .3rem;">        
+            <!-- ISI VIA JS -->
+            <!-- <a style="color: black;">
+                <div class="card">
+                    <div class="card-content card-content-padding">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="">
+                        <h5>nama menu</h5><br>
+                        <p style="color: #808080; font-size: 11px;">menu deskripsi ini enak ini paiot in imurah</p><br>
+                        <h5>Rp. 50.000</h5>
+                    </div>
+                </div>
+            </a>
+            <a style="color: black;">
+                <div class="card">
+                    <div class="card-content card-content-padding">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="">
+                        <h5>nama menu</h5><br>
+                        <p style="color: #808080; font-size: 11px;">menu deskripsi ini enak ini paiot in imurah</p><br>
+                        <h5>Rp. 50.000</h5>
+                    </div>
+                </div>
+            </a> -->
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,335 @@
+<div class="page">
+    <!-- CUSTOMER TOOLBAR -->
+    <div class="customer_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/pesanan/" class="tab-link tab-link-active">
+                <i class="f7-icons">bag_fill</i>
+                <span class="tabbar-label">Pesanan</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+    <!-- KASIR TOOLBAR -->
+    <div class="kasir_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">printer_fill</i>
+                <span class="tabbar-label">Kasir</span>
+            </a>
+            <a href="/stok/" class="tab-link">
+                <i class="f7-icons">rectangle_grid_2x2_fill</i>
+                <span class="tabbar-label">Stok</span>
+            </a>
+            <a href="/riwayat/" class="tab-link">
+                <i class="f7-icons">doc_text_fill</i>
+                <span class="tabbar-label">Riwayat</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+    <!-- DRIVER TOOLBAR-->
+	<div class="driver_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/pesanan/" class="tab-link tab-link-active">
+				<i class="f7-icons">bag_fill</i>
+				<span class="tabbar-label">Pesanan</span>
+			  </a>
+			<a href="/riwayat/" class="tab-link">
+				<i class="f7-icons">car_fill</i>
+				<span class="tabbar-label">Riwayat</span>
+			  </a>
+			  <a href="/profile/" class="tab-link">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+	</div>
+    <!-- ADMIN TOOLBAR -->
+	<div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/beranda/" class="tab-link tab-link-active">
+				<i class="f7-icons">house_fill</i>
+				<span class="tabbar-label">Beranda</span>
+			  </a>
+			  <a href="/profile/" class="tab-link">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+	</div>
+
+    <!-- MODAL PILIH DRIVER -->
+    <div id="mod-pilihdriver" class="mod-jenisbayar">
+        <div class="mod-jenis-con">
+            <h5>Pilih Driver</h5>            
+            <div class="mod_pilihdriver_content">
+                <!-- <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div> -->
+            </div>
+            <div class="block" style="margin-bottom: 0; margin-top: 1rem;">
+                <div class="col-50"><a style="background: #9B9B9B;" class="button button-fill button-round" onclick="TutupModal('mod-pilihdriver')">Tutup</a></div>
+            </div>           
+        </div>
+    </div>
+
+    <!-- MODAL MENU DETIL -->
+    <div id="mod-ubahmenu" class="modal-menu">
+        <div class="modal-menu-con">
+            <h5 style="color: #9B9B9B;">Ubah Pesanan</h5>
+
+            <div class="list-pesan-detil" id="mod_ubahmenu_content">
+                <!-- <div class="item-pesandetil">
+                    <h5 style="display: inline;">Beef Burger</h5>
+                    <div id="item_pesandetil_'+ i +'" hidden>123</div>
+                    <div class="btn-group">
+                        <a class="button btn-trsh"><i class="f7-icons">trash_fill</i></a>
+                        <a class="button btn-mns"><i class="fa fa-minus"></i></a>
+                        <label>0</label>
+                        <a class="button btn-pls"><i class="fa fa-plus"></i></a>
+                    </div>
+                </div> -->
+            </div>     
+            
+            <div class="row" style="margin-top: 2rem;">
+                <div class="col-50">
+                    <a style="background: #9B9B9B;" class="button button-fill button-round" onclick="TutupModal('mod-ubahmenu')">Tutup</a>
+                </div>
+                <div class="col-50">
+                    <a class="button button-fill button-round" onclick="ubahmenu()">Ubah</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL JENIS PEMBAYARAN -->
+    <div id="mod-jenisbayar-pesanandetil" class="mod-jenisbayar">
+        <div class="mod-jenis-con">
+            <h5>Jenis Pembayaran</h5>
+            <div class="mod_jenisbayar_content">
+                <!-- <div class="row">
+                    <a href="">Tunai</a>
+                </div>
+                <div class="row">
+                    <a href="">Transfer Bank</a>
+                </div>
+                <div class="row">
+                    <a href="">QRIS</a>
+                </div> -->
+            </div>	
+        </div>
+    </div>
+
+    <!-- MODAL KONFIRMASI DARI DIRVER -->
+    <div id="modkonfirmasi_pesanan_driver" class="modpass">
+        <div class="modcon">
+            <h3 style="margin-bottom: 2rem;">Konfirmasi Pesanan</h3>
+            <h5 style="margin-bottom: 2rem;">Yakin ingin melanjutkan pesanan ?</h5>
+            <div class="row" style="margin-right: 1.5rem;">
+                <div class="col-50"><a onclick="TutupModal('modkonfirmasi_pesanan_driver')" class="button button-fill tutup-btn">Tutup</a></div>
+                <div class="col-50"><a onclick="button_pesanan('proses')" class="button button-fill ganti-btn">Proses</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL KONFIRMASI KIRIM DRIVER -->
+    <div id="modkonfirmasi_pesanan" class="modpass">
+        <div class="modcon">
+            <h3 style="margin-bottom: 2rem;">Konfirmasi Pesanan</h3>
+            <h5 style="margin-bottom: 2rem;">Yakin ingin melanjutkan pesanan ?</h5>
+            <div class="row" style="margin-right: 1.5rem;">
+                <div class="col-50"><a onclick="TutupModal('modkonfirmasi_pesanan')" class="button button-fill tutup-btn">Tutup</a></div>
+                <div class="col-50"><a onclick="kirimKeDriver()" class="button button-fill ganti-btn">Proses</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL KONFIRMASI SELESAI -->
+    <div id="modkonfirmasi_pesanan_selesai" class="modpass">
+        <div class="modcon">
+            <h3 style="margin-bottom: 2rem;">Konfirmasi Pesanan</h3>
+            <h5 style="margin-bottom: 2rem;">Yakin ingin menyelesaikan pesanan ?</h5>
+            <div class="row" style="margin-right: 1.5rem;">
+                <div class="col-50"><a onclick="TutupModal('modkonfirmasi_pesanan_selesai')" class="button button-fill tutup-btn">Tutup</a></div>
+                <div class="col-50"><a onclick="button_pesanan('selesai')" class="button button-fill ganti-btn">Selesai Pesanan</a></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="page-content bg-custom">
+        <!-- TITLE / NAVBAR -->
+        <div class="navbar" style="color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/pesanan/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title">Detil Pesanan</div>
+            </div>
+        </div>
+
+        <!-- PESANAN DETIL CUSTOMER + KASIR + DRIVER-->
+        <section class="keranjang-customer">
+            <div class="card">
+                <h4 id="PesananDetil_Transaksi_id"></h4>
+                <h4 id="PesananDetil_Transaksi_id_text" hidden></h4>
+                <label id="PesananDetil_Transaksi_tanggal"></label>
+            </div>
+            <div class="row card">
+                <div class="col-50">
+                    <h4>Status Pesanan</h4>
+                    <label style="color: #4A90E2;" id="PesananDetil_Transaksi_status"></label>
+                </div>
+                <div class="col-50" style="border-left: 1px solid black; padding-left: 1rem;">
+                    <h4>Status Pengiriman</h4>
+                    <label style="color: #4A90E2;" id="PesananDetil_Transaksi_delivery_status"></label>
+                </div>
+            </div>
+            <div class="row card no-boxshadow">
+                <div class="col-50">
+                    <h4>Nama Pelanggan</h4>
+                    <label id="PesananDetil_Customer_Nama"></label>
+                    <!-- <label id="PesananDetil_Customer_Nama">Daniel Ivander Kurniawan</label> -->
+                </div>
+                <div class="col-50" style="border-left: 1px solid black; padding-left: 1rem;">
+                    <h4>Telepon</h4>
+                    <label id="PesananDetil_Customer_Telepon">xxxx xxxx xxxx</label>
+                    <label id="PesananDetil_Customer_latitude" hidden></label>
+                    <label id="PesananDetil_Customer_longtitude" hidden></label>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Alamat</h4>
+                <label id="PesananDetil_Customer_Alamat">JL. Dhamhausaha no.22, Kec gubeng kota, surabaja jawa timur</label>
+            </div>
+            <div class="card">
+                <div id="pesanan_map" class="google_maps"></div>
+            </div>
+
+
+            
+            <!-- CUTOMER + KASIR + DRIVER ONLY -->
+            <div class="row card no-boxshadow" id="customer_Driver_data">
+                <div class="col-50">
+                    <h4>Kasir</h4>
+                    <label id="PesananDetil_Kasir_Nama"></label>
+                </div>
+                <div class="col-50" style="border-left: 1px solid black; padding-left: 1rem;">
+                    <h4>Driver</h4>
+                    <label id="PesananDetil_Driver_Nama"></label>
+                </div>
+            </div>
+
+            <div class="row">
+                <h5>Detail Pesanan</h5>
+            </div>
+            <div class="detailpesanan" id="detilpesan" onclick="BukaModal('mod-ubahmenu')">
+                <table>
+                    <tbody id="PesananDetil_listMenu">
+
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="card no-boxshadow">
+                <div class="card-content card-content-padding">
+                    <div class="row">
+                        <p>Subtotal</p>
+                        <p id="PesananDetail_SubTotal">Rp 0</p>
+                    </div>
+                    <div class="row">
+                        <p>Diskon</p>
+                        <p id="PesananDetail_Diskon_bottom">Rp 0</p>
+                    </div>
+                    <div class="row">
+                        <p>Biaya Kirim</p>
+                        <p id="PesananDetail_Kirim">Rp 0</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h4>Total</h4>
+                    <h4 id="PesananDetail_Total_bottom">Rp 0</h4>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Catatan Tambahan</h4>
+                <label id="PesananDetil_Transkasi_Catatan"></label>
+            </div>
+            <div class="row card no-boxshadow" >
+                <div class="col-50">
+                    <h4>Jenis Pembayaran</h4>
+                </div>
+                <div class="col-50" style="text-align: end;" id="pilihpembayaran" onclick="BukaModal('mod-jenisbayar-pesanandetil')">
+                    <h4 id="PesananDetil_Transaksi_JeniSPembayaran">
+                        Tunai
+                    </h4>
+                    <h4 id="PesananDetil_Transaksi_JeniSPembayaran_id" hidden>1</h4>
+                </div>
+            </div>
+
+            <!-- KASIR + ADMIN ONLY -->
+            <div class="row card no-boxshadow" id="pilihdriver" onclick="BukaModal('mod-pilihdriver')">
+                <h4>Driver</h4>
+                <h4 id="pesanan_driver_name">
+                    Pilih Driver <i class="f7-icons" style="color: black;">chevron_right</i>
+                </h4>
+                <h4 id="pesanan_driver_id" hidden>0</h4>
+            </div>
+            <!-- KASIR + ADMIN ONLY -->
+            <div class="card no-boxshadow" id="pesanan_nominalpembayaran">
+                <h4>Nominal Pembayaran</h4>
+                <div class="mytextbox">
+                    <input type="text" name="pesanan_kasir_nominalpembayaran" id="pesanan_kasir_nominalpembayaran">
+                </div>
+            </div>
+        </section>
+
+        <!-- DRIVER OPTION -->
+        <section class="driver-option" style="background: white; padding: 1rem 0;">
+            <div class="row" style="padding: 0 .5rem;">
+                <div class="col-50">
+                    <a style="border-radius: 20px; background: #04203E; color: white;" class="button" onclick="Rute()">Rute</a>
+                </div>
+                <div class="col-50">
+                    <a style="border-radius: 20px; background: #F32E25; color: white;" class="button" id="status_driver" onclick="BukaModal('modkonfirmasi_pesanan_driver')">Antar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- KASIR + ADMIN OPTION -->
+        <section class="kasir-option" style="background: white; padding: 1rem 0;">
+            <div class="row" style="padding: 0 .5rem;" id="pesanandetil_btn_kirimDriver">
+                <div class="col-100">
+                    <a style="border-radius: 20px; background: #04203E; color: white;" class="button" id="kirim_driver" onclick="BukaModal('modkonfirmasi_pesanan')">Kirim Ke Driver</a>
+                </div>                
+            </div>
+            <div class="row" style="padding: 0 .5rem;" id="pesanandetil_btn_selesai">
+                <div class="col-100">
+                    <a style="border-radius: 20px; background: #F32E25; color: white;" class="button" id="selesai_pesan" onclick="BukaModal('modkonfirmasi_pesanan_selesai')">Cetak Nota (Selesai)</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>

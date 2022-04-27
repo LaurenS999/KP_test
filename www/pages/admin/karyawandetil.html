@@ -1,0 +1,104 @@
+<div class="page">
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+    
+    <div class="page-content bg-custom">
+        <!-- TITLE / NAVBAR -->
+        <div class="navbar" style="color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/karyawan/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title" id="karyawandetil_title_ubah">Ubah Karyawan</div>
+                <div class="title" id="karyawandetil_title_tambah">Tambah Karyawan</div>
+            </div>
+        </div>
+
+        <!-- FORM CONTENT -->
+        <div class="content-box">
+            <div class="card no-boxshadow">
+                <h4 id="karyawandetil_id" hidden></h4>
+                <h4>Nama<label class="asterisk-input"></label></h4>
+                <input type="text" name="karyawandetil_nama" id="karyawandetil_nama" placeholder="Ketik nama disini...">
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Username<label class="asterisk-input"></label></h4>
+                <input type="text" name="karyawandetil_username" id="karyawandetil_username" placeholder="Ketik username disini...">
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Email<label class="asterisk-input"></label></h4>
+                <input name="karyawandetil_email" id="karyawandetil_email" type="text" placeholder="Ketik email disini...">
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Telepon<label class="asterisk-input"></label></h4>
+                <input name="karyawandetil_telepon" id="karyawandetil_telepon" type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" placeholder="Ketik telepon disini...">
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Password<label class="asterisk-input"></label></h4>
+                <div class="password-section">
+                    <input type="password" id="karyawandetil_password" name="karyawandetil_password" placeholder="Ketik password disini...">
+                    <span>
+                        <i id="eye-password-karyawan" class="fa fa-eye" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <form class="form-ajax-editkaryawan">
+            <div class="card">
+                <div class="row">
+                    <div class="col-50">
+                        <h4>Jabatan
+            				<label class="asterisk-input"></label>
+                        </h4>
+                        <div class="mytextbox my-combobox">
+                            <select name="karyawan_jabatan_combobox" id="karyawan_jabatan_combobox">
+                                <option value="" selected>-- Pilih jabatan --</option>
+                                <option value="Kasir">Kasir</option>
+                                <option value="Driver">Driver</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+                            <i class="f7-icons">chevron_right</i>
+                        </div>
+                    </div>
+                    <div style="border-left: 1px solid black; padding-left: 1rem;" class="col-50">
+                        <h4>Cabang
+            				<label class="asterisk-input"></label>
+                        </h4>
+                        <div class="mytextbox my-combobox">
+                            <select name="karyawan_cabang_combobox" id="karyawan_cabang_combobox" class="cabang_combobox">
+                                <!-- <option value="">Resto #01</option>
+                                <option value="">Resto #01</option> -->
+                            </select>
+                            <i class="f7-icons">chevron_right</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+
+        <div class="double-button-box" id="karyawanedit_ubah">
+            <a class="button button-fill button-round" onclick="KonfirmasiHapus('karyawan')">Hapus</a>
+            <a style="background: #04203E;" class="button button-fill button-round" onclick="UbahData('karyawan')">Ubah</a>
+        </div>
+
+        <div class="single-button-box" id="karyawanedit_tambah">
+            <a style="background: #04203E;" class="button button-fill button-round" onclick="TambahData('karyawan')">Tambah</a>
+        </div>
+
+    </div>
+</div>

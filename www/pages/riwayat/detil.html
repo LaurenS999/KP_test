@@ -1,0 +1,177 @@
+<div class="page">
+    <!-- DRIVER TOOLBAR-->
+	<div class="driver_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/pesanan/" class="tab-link">
+				<i class="f7-icons">bag_fill</i>
+				<span class="tabbar-label">Pesanan</span>
+			  </a>
+			<a href="/riwayat/" class="tab-link tab-link-active">
+				<i class="f7-icons">car_fill</i>
+				<span class="tabbar-label">Riwayat</span>
+			  </a>
+			  <a href="/profile/" class="tab-link">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+	</div>
+    <!-- KASIR TOOLBAR -->
+	<div class="kasir_menu toolbar tabbar-labels toolbar-bottom">
+		<div class="toolbar-inner">
+			<a href="/beranda/" class="tab-link">
+				<i class="f7-icons">printer_fill</i>
+				<span class="tabbar-label">Kasir</span>
+			  </a>
+			<a href="/stok/" class="tab-link">
+				<i class="f7-icons">rectangle_grid_2x2_fill</i>
+				<span class="tabbar-label">Stok</span>
+			  </a>
+			<a href="/riwayat/" class="tab-link tab-link-active">
+				<i class="f7-icons">doc_text_fill</i>
+				<span class="tabbar-label">Riwayat</span>
+			  </a>
+			  <a href="/profile/" class="tab-link">
+				<i class="f7-icons">person_fill</i>
+				<span class="tabbar-label">Profile</span>
+			  </a>
+		</div>
+    </div>
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+    
+    <div class="page-content bg-custom">
+        <!-- TITLE / NAVBAR -->
+        <div class="navbar" style="color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a id="btnBack-driver" href="/pesanan/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                    <a id="btnBack-selainDriver" href="/riwayat/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title">Nota Penjualan</div>
+            </div>
+        </div>
+
+        <!-- KASIR DETIL CUSTOMER + KASIR + ADMIN -->
+        <section class="keranjang-kasir">
+            <div class="card">
+                <h4 id="riwayatdetil_Transaksi_id">Nomor Nota: </h4>                
+                <label id="riwayatdetil_Transaksi_tanggal"> | </label>
+            </div>
+            <div class="card">
+                <h4>Status Pesanan</h4>
+                <label id="riwayatdetil_Transaksi_status" style="color: #4A90E2;">Pesanan Diproses</label>
+            </div>
+            <div class="row card no-boxshadow">
+                <div class="col-50">
+                    <h4>Nama Pelanggan</h4>
+                    <label id="riwayatdetil_Customer_Nama">Daniel Ivander Kurniawan</label>
+                </div>
+                <div style="border-left: 1px solid black; padding-left: .5rem;" class="col-50">
+                    <h4>Telepon</h4>
+                    <label id="riwayatdetil_Customer_Telepon">xxxx xxxx xxxx</label>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Alamat</h4>
+                <label id="riwayatdetil_Customer_Alamat">JL. Dhamhausaha no.22, Kec gubeng kota, surabaja jawa timur</label>
+            </div>
+            <div class="card">
+                <div id="riwayat_map" class="google_maps"></div>
+            </div>
+            <div class="row card no-boxshadow">
+                <div class="col-50">
+                    <h4>Kasir</h4>
+                    <label id="riwayatdetil_Kasir_Nama">nama pelayanan services</label>
+                </div>
+                <div style="border-left: 1px solid black; padding-left: .5rem;" class="col-50">
+                    <h4>Driver</h4>
+                    <label id="riwayatdetil_Driver_Nama">nama driver pengantar</label>
+                </div>
+            </div>
+            <div class="row">
+                <h5>Detail Pesanan</h5>
+            </div>
+
+            <div class="detailpesanan">
+                <table>
+                    <tbody id="riwayatdetil_listMenu">
+
+                    </tbody>
+                </table>
+            </div>
+
+
+           
+            <div class="card no-boxshadow">
+                <div class="card-content card-content-padding">
+                    <div class="row">
+                        <p>Subtotal</p>
+                        <p id="riwayatdetil_Subtotal">Rp 0</p>
+                    </div>
+                    <div class="row">
+                        <p>Diskon</p>
+                        <p id="riwayatdetil_Diskon">Rp 0</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h4>Total:</h4>
+                    <h4 id="riwayatdetil_Total">Rp 0</h4>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Catatan Tambahan</h4>
+                <label id="riwayatdetil_Transkasi_Catatan">JL. Dhamhausaha no.22, Kec gubeng kota, surabaja jawa timur</label>
+            </div>
+            <div class="row card no-boxshadow">
+                <div class="col-50">
+                    <h4>Jenis Pembayaran</h4>
+                </div>
+                <div class="col-50" style="text-align: end;">
+                    <h4 id="riwayatdetil_Transaksi_JeniSPembayaran">Tunai</h4>
+                </div>
+            </div>
+            <div class="row card no-boxshadow pembayaran_kembalian">
+                <div class="col-50">
+                    <h4>Pembayaran</h4>
+                    <h4>Kembalian</h4>
+                </div>
+                <div class="col-50" style="text-align: end;">
+                    <h4 id="riwayatdetil_Pembayaran">Rp 0</h4>
+                    <h4 id="riwayatdetil_kembalian">Rp 0</h4>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- KASIR BUTTON -->
+        <div class="row card no-boxshadow kasir-button-list" style="margin-bottom: 2rem;">
+            <a style="background: #04203E; width: 100%;" class="button button-fill button-round">Cetak Nota</a>
+        </div>
+        <!-- ADMIN BUTTON -->
+        <div class="row admin-button-list" style="margin-bottom: 2rem; padding: 01rem;">
+            <div class="col-50">
+                <a style="background: #F32E25; width: 100%;" class="button button-fill button-round" onclick="HapusData('riwayat')">Hapus</a>
+            </div>
+            <div class="col-50">
+                <a style="background: #04203E; width: 100%;" class="button button-fill button-round">Cetak Nota</a>
+            </div>
+        </div>
+
+    </div>
+</div>

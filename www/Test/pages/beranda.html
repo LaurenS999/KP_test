@@ -1,0 +1,374 @@
+<div class="page">
+    <!-- KASIR TOOLBAR -->
+    <div class="kasir_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">printer_fill</i>
+                <span class="tabbar-label">Kasir</span>
+            </a>
+            <a href="/stok/" class="tab-link">
+                <i class="f7-icons">rectangle_grid_2x2_fill</i>
+                <span class="tabbar-label">Stok</span>
+            </a>
+            <a href="/riwayat/" class="tab-link">
+                <i class="f7-icons">doc_text_fill</i>
+                <span class="tabbar-label">Riwayat</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+    <!-- CUSTOMER TOOLBAR -->
+    <div class="customer_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/pesanan/" class="tab-link">
+                <i class="f7-icons">bag_fill</i>
+                <span class="tabbar-label">Pesanan</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MODAL PILIH CABANG -->
+    <div id="mod-beranda-pilihcabang" class="mod-jenisbayar">
+        <div class="mod-jenis-con">
+            <h5>Pilih Cabang</h5>            
+            <div class="mod_pilihcabang_content">
+                <!-- <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div>
+                <div class="row">
+                    <a>Restaurent #02</a>
+                </div> -->
+            </div>
+            <div class="block" style="margin-bottom: 0; margin-top: 1rem;">
+                <div class="col-50"><a onclick="TutupModal('mod-beranda-pilihcabang')" style="background: #9B9B9B;" class="button button-fill button-round">Tutup</a></div>
+            </div>           
+        </div>
+    </div>
+
+    <!-- FAB BUTTON KERANJANG {CUSTOMER} -->
+    <div class="fab-customer fab fab-extended fab-center-bottom color-red fab_keranjang">
+        <a href="/keranjang/">
+            <i style="font-size: 20px;" class="f7-icons">cart</i>
+            <div class="fab-text" style="font-size: 10px;">Keranjang</div>
+        </a>
+    </div>
+    <!-- FAB BUTTON KERANJANG + MENU (KASIR) -->
+    <div class="fab-kasir fab fab-extended fab-center-bottom color-red fab_keranjang">
+        <a href="/keranjang/">
+            <i style="font-size: 20px;" class="f7-icons">cart</i>
+            <div class="fab-text" style="font-size: 10px;">Keranjang</div>
+        </a>
+    </div>
+
+    <!-- MODAL MENU DETIL (CUSTOMER) -->
+    <div id="Beranda_MenuModal" class="modal-menu">
+        <div class="modal-menu-con">
+            <img class="img-modal-customer" src="./img/drawable-ldpi/Logo.png" alt="">
+            <div>
+                <h4 id="Beranda_MenuModal_nama"></h4>
+                <p id="Beranda_MenuModal_deskripsi"></p>
+                <h4 id="Beranda_MenuModal_harga"></h4>
+                <h4 id="Beranda_MenuModal_harga-diskon"></h4>
+                <h4 id="Beranda_MenuModal_id" hidden></h4>
+            </div>
+            <div class="box-button">
+                <a onclick="Kurang('Beranda_MenuModal')" class="button btn-mns"><i class="fa fa-minus"></i></a>
+                <label id="Beranda_MenuModal_JumlahPesanan">0</label>
+                <a onclick="Tambah('Beranda_MenuModal')" class="button btn-pls"><i class="fa fa-plus"></i></a>
+            </div>
+            <div class="row box-button-kasir">
+                <div class="col-50" >
+                    <a onclick="TutupModal('Beranda_MenuModal')" style="background: #9B9B9B; font-size: 10px;" class="button button-fill">Batal</a>
+                </div>
+                <div class="col-50">
+                    <a onclick="MasukKeranjang('Beranda_MenuModal')" style="font-size: 10px;" class="button button-fill">Masuk Keranjang</a>
+                </div>
+            </div>
+            <a onclick="MasukKeranjang('Beranda_MenuModal')" class="button button-fill btn-tambah-customer">Tambah Keranjang</a>
+        </div>
+    </div>
+
+    <!-- MODAL MENU DETIL KASIR -->
+    <!-- <div id="Beranda_MenuModal_Kasir" class="modal-menu">
+        <div class="modal-menu-con">
+            <div>
+                <h4 id="Beranda_MenuModal_Kasir_nama"></h4>
+                <p id="Beranda_MenuModal_Kasir_deskripsi"></p>
+                <h4 id="Beranda_MenuModal_Kasir_harga"></h4>
+                <h4 id="Beranda_MenuModal_Kasir_harga-diskon"></h4>
+                <h4 id="Beranda_MenuModal_Kasir_id" hidden></h4>
+            </div>
+            <div class="box-button">
+                <label style="float: left;">Jumlah Pesan</label>
+                <a onclick="Kurang('Beranda_MenuModal_Kasir')" class="button btn-mns"><i class="fa fa-minus"></i></a>
+                <label id="Beranda_MenuModal_Kasir_JumlahPesanan">0</label>
+                <a onclick="Tambah('Beranda_MenuModal_Kasir')" class="button btn-pls"><i class="fa fa-plus"></i></a>
+            </div>
+            <div class="row">
+                <div class="col-50" >
+                    <a onclick="TutupModal('Beranda_MenuModal_Kasir')" style="background: #9B9B9B; font-size: 10px;" class="button button-fill">Batal</a>
+                </div>
+                <div class="col-50">
+                    <a onclick="MasukKeranjang('Beranda_MenuModal_Kasir')" style="font-size: 10px;" class="button button-fill">Masuk Keranjang</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="page-content bg-custom">
+        <!-- CUSTOMER TITLE -->
+        <div class="customer-beranda row head-beranda" onclick="BukaModal('mod-beranda-pilihcabang')">
+            <div class="col-33">Beranda</div>
+            <div class="col-66">
+				<div>
+                    <h5 style="display: inline-block;" id="beranda_namaresto">My Resto</h5>
+                    <span><i style="font-size: 0.8rem;" class="f7-icons">chevron_right</i></span>
+					<h5 style="font-weight: normal;" id="beranda_alamatresto">Jl. Dharmahusada no.20 Surabaya</h5>
+				</div>
+			</div>
+        </div>
+        <!-- KASIR TITLE -->
+        <div class="kasir-beranda row head-beranda">
+            <div style="margin: 0;" class="col-33">SCAN PRINTER</div>
+            <div class="col-66">
+				<div>
+                    <h5 style="display: inline-block;">Printer Restaurant #1</h5>
+                    <span><i style="font-size: 0.8rem;" class="f7-icons">chevron_right</i></span>
+					<h5 style="font-weight: normal;"><i style="margin-right: 2px; color: #3FC748; font-size: 0.8rem;" class="f7-icons">circle_fill</i>Terhubung</h5>
+				</div>
+			</div>
+        </div>
+        <!-- ADMIN TITLE MENU-->
+        <div class="admin-beranda">
+            <div class="head-profile admin-profile">
+                <h3 id="" style="margin-top: 1rem;">Hai, Administrator</h3>
+                <p>Username: <label>johnd</label></p>
+                <div class="list">
+                    <a href="/riwayat/" class="">
+                        <i class="f7-icons">printer_fill</i>
+                        <span class="">Penjualan</span>
+                    </a>
+                    <a href="/laporan/" class="">
+                        <i class="f7-icons">doc_text_fill</i>
+                        <span class="">Laporan</span>
+                    </a>
+                    <a href="/pesanan/" class="">
+                        <i class="f7-icons">bag_fill</i>
+                        <span class="">Pesanan</span>
+                    </a>
+                    <a href="/stok/" class="">
+                        <i class="f7-icons">rectangle_grid_2x2_fill</i>
+                        <span class="">Stok</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CUSTOMER BANNER -->
+        <div class="slider row customer-banner" style="margin-bottom: 1rem;">
+            <div class="slides" id="beranda_banner_promo">
+                <!-- <div>
+                    <img class="banner" src="./img/drawable-ldpi/1200x628.png" alt="">                
+                </div>
+                <div>
+                    <img class="banner" src="./img/drawable-ldpi/1200x628.png" alt="">                
+                </div> -->
+            </div>
+        </div>
+
+        <!-- KASIR STATUS -->
+        <div class="statusberanda-kasir">
+            <div class="row">                
+                <div class="col-66">                    
+                    <img src="./img/drawable-ldpi/Logo.png" alt="">
+                    <a href="/pesanan/"><h2>PESANAN ONLINE</h2></a>
+                </div>               
+                <div class="col-33" style="text-align: center;">
+                    <h1 style="margin: 0; color: #F32E25;" id="jumlah_pesanBaru">+2000</h1>    
+                    <p style="color: #67605F; margin: 0;">Pesanan Baru</p> 
+                </div>
+            </div>
+        </div>
+        <div class="title-kasir row" style="padding: 0.5rem 1rem;">
+            <h4 style="color: #2C303E; margin: 0;">Kasir</h4>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="pencarian">
+            <div class="list">
+                <div class="mytextbox">
+                  <span class="SearchMenu_Span"><i class="f7-icons">search</i></span>
+                  <input type="text" class="SearchMenu" name="search" id="Beranda_SearchMenu" placeholder="Cari menu disini...">
+                </div>
+            </div>
+            <div class="list media-list">                    
+                <div class="item-content">                       
+                    <div class="item-inner item-cell">
+                        <div class="item-title-row">
+                            <div class="item-cell kategori-text">Kategori</div>
+                            <div class="item-cell see-all">
+                                <a href="/kategori/''"><small>See All</small></a>
+                            </div>  
+                        </div>
+                    </div>                           
+                </div>    
+            </div>
+        </div>
+
+        <!-- KATEGORI COLUMN -->
+        <div class="block kategori-box-list slider" style="margin: 0">
+			<div class="mycolumn slides-kategori" id="beranda_list_kategoriBox">
+                <!-- ISI VIA JS -->
+                <!-- <div class="column">
+                    <a style="font-size: 12px; font-weight:bold; color: black;">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="" >
+                        <label>Makanan</label>
+                    </a>
+                </div>
+                <div class="column">
+                    <a style="font-size: 12px; font-weight:bold; color: black;">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="" >
+                        <label>Makanan</label>
+                    </a>
+                </div>
+                <div class="column">
+                    <a style="font-size: 12px; font-weight:bold; color: black;">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="" >
+                        <label>Makanan</label>
+                    </a>
+                </div> -->
+			</div>
+        </div>
+
+        <!-- ADMIN KONFIRGURASI -->
+        <div class="title-admin block" style="margin: 1rem; padding: 0;">
+            <h3>Konfigurasi</h3>
+        </div>
+        <div class="admin-konfigurasi">
+            <div class="list" style="padding-top: 1rem;">
+                <a href="/cabang/" class="">
+                    <!-- <i class="f7-icons">printer_fill</i> -->
+                    <img src="./img/drawable-ldpi/Logo.png" alt="">
+                    <span class="">Cabang</span>
+                </a>
+                <a href="/karyawan/" class="">
+                    <!-- <i class="f7-icons">doc_text_fill</i> -->
+                    <img src="./img/drawable-ldpi/Logo.png" alt="">
+                    <span class="">Karyawan</span>
+                </a>
+                <a href="/kategori/kategoriedit" class="">
+                    <!-- <i class="f7-icons">bag_fill</i> -->
+                    <img src="./img/drawable-ldpi/Logo.png" alt="">
+                    <span class="">Kategori</span>
+                </a>
+            </div>
+            <div class="list" style="padding-bottom: 1rem;">
+                <a href="/menu/" class="">
+                    <!-- <i class="f7-icons">printer_fill</i> -->
+                    <img src="./img/drawable-ldpi/Logo.png" alt="">
+                    <span class="">Menu</span>
+                </a>
+                <a href="/pembayaran/" class="">
+                    <!-- <i class="f7-icons">doc_text_fill</i> -->
+                    <img src="./img/drawable-ldpi/Logo.png" alt="">
+                    <span class="">Pembayaran</span>
+                </a>
+                <a href="/banner/" class="">
+                    <!-- <i class="f7-icons">bag_fill</i> -->
+                    <img src="./img/drawable-ldpi/Logo.png" alt="">
+                    <span class="">Banner</span>
+                </a>
+            </div>
+        </div>
+   
+        <!-- KASIR DEFAULT (KATEGEORI MENU LIST) -->
+        <div id="beranda_list_kategori" class="kasir-listmenu block" style="margin-bottom: 3.5rem; padding: .3rem;">        
+            <!-- ISI VIA JS -->
+            <!-- <a style="color: black;">
+                <div class="card">
+                    <div class="card-content card-content-padding">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="">
+                        <h5>nama menu</h5><br>
+                        <p style="color: #808080; font-size: 11px;">menu deskripsi ini enak ini paiot in imurah</p><br>
+                        <h5>Rp. 50.000</h5>
+                    </div>
+                </div>
+            </a>
+            <a style="color: black;">
+                <div class="card">
+                    <div class="card-content card-content-padding">
+                        <img src="./img/drawable-ldpi/Logo.png" alt="">
+                        <h5>nama menu</h5><br>
+                        <p style="color: #808080; font-size: 11px;">menu deskripsi ini enak ini paiot in imurah</p><br>
+                        <h5>Rp. 50.000</h5>
+                    </div>
+                </div>
+            </a> -->
+        </div>
+        <!-- CUSTOMER DEFAULT (PROMO) -->
+        <div class="customer-promo block">
+            <h3>Promo</h3>
+        </div>
+        <div class="block mypromo" style="margin: 0; margin-bottom: 4rem;">
+            <div class="row" id="customer_BerandaListPromo" >
+                <!-- ISA VIA JS -->
+                <!-- <div class="col-50 medium-25">
+                    <a style="color: black;">
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <img style="margin:auto;" src="./img/drawable-ldpi/Logo.png" alt="error">
+                                <p>Ayam Bakar Madu</p>
+                                <p><strike>Rp. 30.000</strike></p>
+                                <h4>Rp. 20.000</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-50 medium-25">
+                    <a style="color: black;">
+                        <div class="card">
+                            <div class="card-content card-content-padding">
+                                <img style="margin:auto;" src="./img/drawable-ldpi/Logo.png" alt="error">
+                                <p>Ayam Bakar Madu</p>
+                                <p><strike>Rp. 30.000</strike></p>
+                                <h4>Rp. 20.000</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                 -->
+            </div>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,93 @@
+<div class="page">
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- FAB BUTTON PEMBAYARAN (ADMIN) -->
+    <div style="width: 55%; max-width: 180px;" class="fab-kasir fab fab-extended fab-center-bottom color-red">
+        <a href="/pembayarandetil/0">
+            <i style="font-size: 20px;" class="f7-icons">plus</i>
+            <div class="fab-text" style="text-align: center; font-size: 10px; padding-right: 1rem;">Tambah Jenis Pembayaran</div>
+        </a>
+    </div>
+    <div class="page-content bg-custom">
+        <!-- TITLE -->
+        <div class="navbar" style="margin-bottom: 1rem; color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/beranda/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div style="font-size: 15px;" class="title">Daftar Jenis Pembayaran</div>
+            </div>
+        </div>
+
+        <!-- SEARCH (ADMIN)-->
+        <div class="pencarian admin-cari">
+            <div class="list">
+                <div class="mytextbox">
+                  <span class=""><i class="f7-icons" onclick="admin_search('jenispembayaran')">search</i></span>
+                  <input style="width: 85%;" type="text" class="SearchMenu" name="admin_jenispembayaran_search" id="admin_jenispembayaran_search" placeholder="Cari Jenis Pembayaran">
+                </div>
+            </div>
+        </div>
+
+        <div class="block" style="margin: 1rem 0;">
+            <p style="color: #9B9B9B;"><b>Semua Jenis Pembayaran</b></p>
+        </div>
+
+        <!-- LIST JENIS BAYAR -->
+        <div class="block" style="margin: 0; padding: 0;">
+            <div class="list links-list" id="jenisBayarAdmin">
+                <ul id="list_jenisbayar">
+                    <!-- ISI VIA JS -->
+                    <!-- <li style='padding: 8px 15px; border-bottom: 1px solid rgba(0,0,0,0.1);'>             
+                            <a href="/kategoriedit/'+ obj[i]['category_id']'">
+                                <div><img style='width: 4rem;' src='./img/drawable-ldpi/Logo.png'></div>
+                                <div style='width: 95%;'>" +  obj[i]['category_name'] </div>
+                            </a>
+                        </li>
+                    <li style='margin-bottom: 2px;'>                  
+                        <a href='//'>
+                            <div><img style='width: 4rem;' src='./img/drawable-ldpi/Logo.png'></div>
+                            <div style='width: 95%;'>Makanan</div>
+                        </a>
+                    </li>
+                    <li style='margin-bottom: 2px;'>                  
+                        <a href='//'>
+                            <div><img style='width: 4rem;' src='./img/drawable-ldpi/Logo.png'></div>
+                            <div style='width: 95%;'>Makanan</div>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="list-jenisbayar" id="list_jenisbayar2">
+            <!-- <a>
+                <img src='./img/drawable-ldpi/Logo.png'>
+                <div>Tunai</div>
+            </a>
+            <a>
+                <img src='./img/drawable-ldpi/Logo.png'>
+                <div>Transfer Bank</div>
+            </a>
+            <a>
+                <img src='./img/drawable-ldpi/Logo.png'>
+                <div>QRIS</div>
+            </a> -->
+        </div>
+
+    </div>
+</div>
